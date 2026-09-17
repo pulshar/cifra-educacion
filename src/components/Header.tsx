@@ -93,7 +93,7 @@ export const Header: React.FC = () => {
                         <button
                             id="student-selector-dropdown-btn"
                             onClick={() => setIsStudentDropdownOpen((prev) => !prev)}
-                            className="flex items-center gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl border border-brand-200 dark:border-brand-900/60 bg-brand-50/70 dark:bg-brand-950/40 hover:bg-brand-100/70 dark:hover:bg-brand-950/70 text-slate-800 dark:text-slate-100 transition-colors cursor-pointer shadow-2xs"
+                            className="flex items-center gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg border border-brand-200 dark:border-brand-900/60 bg-brand-50/70 dark:bg-brand-950/40 hover:bg-brand-100/70 dark:hover:bg-brand-950/70 text-slate-800 dark:text-slate-100 transition-colors cursor-pointer shadow-2xs"
                             aria-label="Seleccionar alumno activo"
                         >
                             <img
@@ -117,7 +117,7 @@ export const Header: React.FC = () => {
                         {isStudentDropdownOpen && (
                             <div
                                 id="student-selector-menu"
-                                className="absolute right-0 top-[34px] mt-2 w-64 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-100"
+                                className="absolute right-0 top-[34px] mt-2 w-64 bg-white dark:bg-slate-900 rounded-lg shadow-xl border border-slate-200 dark:border-slate-800 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-100"
                             >
                                 <div className="px-3 py-1.5 text-[11px] font-semibold text-slate-400 uppercase tracking-wider border-b border-slate-100 dark:border-slate-800">
                                     {t.changeStudent}
@@ -182,7 +182,7 @@ export const Header: React.FC = () => {
                     <button
                         id="header-notifications-btn"
                         onClick={() => navigateTo('comunicaciones', 'notificaciones')}
-                        className="relative p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors cursor-pointer"
+                        className="relative p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
                         title="Ver notificaciones"
                         aria-label="Notificaciones"
                     >
@@ -208,7 +208,7 @@ export const Header: React.FC = () => {
                     <button
                         id="header-theme-toggle-btn"
                         onClick={toggleTheme}
-                        className="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors cursor-pointer"
+                        className="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
                         title={theme === 'light' ? 'Modo oscuro' : 'Modo claro'}
                         aria-label="Alternar tema"
                     >
@@ -219,7 +219,7 @@ export const Header: React.FC = () => {
                     <button
                         id="header-user-profile-btn"
                         onClick={() => navigateTo('configuracion', 'usuario')}
-                        className="hidden sm:flex items-center gap-2 pl-2 pr-1 py-1 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                        className="hidden sm:flex items-center gap-2 pl-2 pr-1 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
                         title="Configuración de usuario"
                     >
                         <img
@@ -238,7 +238,7 @@ export const Header: React.FC = () => {
                         type="button"
                         id="header-logout-btn"
                         onClick={logout}
-                        className="p-2 text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/40 rounded-xl transition-colors cursor-pointer"
+                        className="p-2 text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/40 rounded-lg transition-colors cursor-pointer"
                         title="Cerrar sesión (volver a pantalla de login)"
                         aria-label="Cerrar sesión"
                     >

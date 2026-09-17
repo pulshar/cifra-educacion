@@ -48,7 +48,7 @@ export const DocumentosView: React.FC = () => {
   return (
     <div id="documentos-section-view" className="space-y-6 pb-12">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-xs">
         <div>
           <h2 className="text-xl font-bold text-slate-900 dark:text-white font-display">
             Repositorio de Documentos Escolares
@@ -62,7 +62,7 @@ export const DocumentosView: React.FC = () => {
         <button
           id="btn-upload-document"
           onClick={() => openModal('upload_document')}
-          className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-xs transition-colors cursor-pointer"
+          className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-xs transition-colors cursor-pointer"
         >
           <UploadCloud className="w-4 h-4" />
           <span>Subir Documento / Justificante</span>
@@ -84,9 +84,9 @@ export const DocumentosView: React.FC = () => {
               key={cat.id}
               id={`doc-folder-${cat.id}`}
               onClick={() => setActiveCategory(cat.id)}
-              className={`p-3.5 rounded-2xl border text-left transition-all cursor-pointer flex flex-col justify-between ${isSelected
-                  ? 'bg-brand-600 text-white border-brand-600 shadow-xs shadow-brand-600/30'
-                  : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-50'
+              className={`p-3.5 rounded-lg border text-left transition-all cursor-pointer flex flex-col justify-between ${isSelected
+                ? 'bg-brand-600 text-white border-brand-600 shadow-xs shadow-brand-600/30'
+                : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-50'
                 }`}
             >
               <div className="flex items-center justify-between">
@@ -105,7 +105,7 @@ export const DocumentosView: React.FC = () => {
       </div>
 
       {/* Search Bar */}
-      <div className="flex items-center justify-between gap-3 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+      <div className="flex items-center justify-between gap-3 p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
         <div className="relative flex-1 max-w-md">
           <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
@@ -113,7 +113,7 @@ export const DocumentosView: React.FC = () => {
             placeholder="Buscar documentos por nombre o formato..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-brand-500"
+            className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-brand-500"
           />
         </div>
         <span className="text-xs text-slate-500">
@@ -125,7 +125,7 @@ export const DocumentosView: React.FC = () => {
       {filteredDocuments.length === 0 ? (
         <EmptyState title="No se encontraron documentos en esta categoría" />
       ) : (
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
+        <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
               <thead className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-slate-500 font-bold uppercase tracking-wider text-[10px]">

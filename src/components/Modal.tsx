@@ -57,7 +57,7 @@ export const ModalRenderer: React.FC = () => {
           exit={{ opacity: 0, scale: 0.95, y: 10 }}
           transition={{ duration: 0.2 }}
           id="app-modal-content"
-          className="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden my-8"
+          className="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-lg shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden my-8"
         >
           {/* Top Bar with Close Button */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/70">
@@ -99,7 +99,7 @@ export const ModalRenderer: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 text-sm text-slate-700 dark:text-slate-300 leading-relaxed border border-slate-100 dark:border-slate-800">
+                  <div className="p-4 rounded-lg bg-slate-50 dark:bg-slate-800/60 text-sm text-slate-700 dark:text-slate-300 leading-relaxed border border-slate-100 dark:border-slate-800">
                     <p className="font-medium text-slate-900 dark:text-slate-100 mb-2">{notif.message}</p>
                     {notif.details && <p className="text-slate-600 dark:text-slate-400">{notif.details}</p>}
                   </div>
@@ -168,7 +168,7 @@ export const ModalRenderer: React.FC = () => {
                   </div>
 
                   {/* Header breakdown */}
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200/60 dark:border-slate-800">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg border border-slate-200/60 dark:border-slate-800">
                     <div>
                       <span className="text-slate-400 block">Fecha de emisión</span>
                       <span className="font-semibold text-slate-700 dark:text-slate-200">{inv.date}</span>
@@ -188,7 +188,7 @@ export const ModalRenderer: React.FC = () => {
                     <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
                       Líneas de facturación
                     </h4>
-                    <div className="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden text-sm">
+                    <div className="border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden text-sm">
                       <table className="w-full text-left">
                         <thead className="bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-600 dark:text-slate-300">
                           <tr>
@@ -276,7 +276,7 @@ export const ModalRenderer: React.FC = () => {
 
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white">{ev.title}</h3>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 text-sm">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 text-sm">
                     <div className="flex items-center gap-2.5 text-slate-600 dark:text-slate-300">
                       <Calendar className="w-4 h-4 text-brand-500" />
                       <span>{ev.date}</span>
@@ -311,7 +311,7 @@ export const ModalRenderer: React.FC = () => {
                   )}
 
                   {ev.homework && (
-                    <div className="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 text-sm">
+                    <div className="p-3.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 text-sm">
                       <span className="font-semibold text-amber-800 dark:text-amber-300 block mb-1 flex items-center gap-1.5">
                         <BookOpen className="w-4 h-4" /> Tareas o Deberes asociados:
                       </span>
@@ -353,25 +353,25 @@ export const ModalRenderer: React.FC = () => {
 
                   {/* Summary of evaluations */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                    <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-center">
+                    <div className="p-3.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-center">
                       <span className="text-xs text-slate-500 block mb-1">1ª Evaluación</span>
                       <span className="text-2xl font-black text-brand-600 dark:text-brand-400">
                         {subj.firstEvaluation !== null ? subj.firstEvaluation : '—'}
                       </span>
                     </div>
-                    <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-center">
+                    <div className="p-3.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-center">
                       <span className="text-xs text-slate-500 block mb-1">2ª Evaluación</span>
                       <span className="text-2xl font-black text-brand-600 dark:text-brand-400">
                         {subj.secondEvaluation !== null ? subj.secondEvaluation : '—'}
                       </span>
                     </div>
-                    <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-center">
+                    <div className="p-3.5 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-center">
                       <span className="text-xs text-slate-500 block mb-1">3ª Evaluación</span>
                       <span className="text-2xl font-black text-brand-600 dark:text-brand-400">
                         {subj.thirdEvaluation !== null ? subj.thirdEvaluation : '—'}
                       </span>
                     </div>
-                    <div className="p-3.5 rounded-xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200/80 dark:border-amber-900/50 text-center">
+                    <div className="p-3.5 rounded-lg bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200/80 dark:border-amber-900/50 text-center">
                       <span className="text-xs font-semibold text-amber-800 dark:text-amber-300 block mb-1">
                         Extraordinaria — Septiembre
                       </span>
@@ -387,7 +387,7 @@ export const ModalRenderer: React.FC = () => {
                       <TrendingUp className="w-4 h-4 text-brand-500" />
                       Evolución académica de la asignatura
                     </h4>
-                    <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-800">
+                    <div className="p-4 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-800">
                       <div className="h-32 flex items-end justify-around gap-4 pt-4 px-2">
                         {subj.historyScores.map((item, idx) => {
                           const heightPct = Math.round((item.score / maxScore) * 100);
@@ -419,7 +419,7 @@ export const ModalRenderer: React.FC = () => {
                       <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
                         Observaciones del profesorado
                       </h4>
-                      <div className="p-4 rounded-xl bg-slate-100/70 dark:bg-slate-800 text-sm text-slate-700 dark:text-slate-300 leading-relaxed border-l-4 border-brand-500">
+                      <div className="p-4 rounded-lg bg-slate-100/70 dark:bg-slate-800 text-sm text-slate-700 dark:text-slate-300 leading-relaxed border-l-4 border-brand-500">
                         "{subj.observations}"
                       </div>
                     </div>
@@ -472,7 +472,7 @@ export const ModalRenderer: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="prose prose-sm dark:prose-invert max-w-none p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 text-sm text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed">
+                  <div className="prose prose-sm dark:prose-invert max-w-none p-4 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 text-sm text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed">
                     {circ.content}
                   </div>
 
@@ -537,7 +537,7 @@ export const ModalRenderer: React.FC = () => {
                   </div>
 
                   {/* Mock document viewer frame */}
-                  <div className="h-64 sm:h-80 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-300 dark:border-slate-700 flex flex-col items-center justify-center p-6 text-center">
+                  <div className="h-64 sm:h-80 bg-slate-100 dark:bg-slate-800 rounded-lg border border-slate-300 dark:border-slate-700 flex flex-col items-center justify-center p-6 text-center">
                     <FileText className="w-16 h-16 text-brand-500/80 mb-3" />
                     <p className="font-semibold text-slate-800 dark:text-slate-200 mb-1">{doc.name}</p>
                     <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm">
@@ -593,7 +593,7 @@ export const ModalRenderer: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-xs">
+                  <div className="grid grid-cols-2 gap-3 p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-xs">
                     <div>
                       <span className="text-slate-400 block">Fecha:</span>
                       <span className="font-medium text-slate-700 dark:text-slate-300">{inc.date}</span>
@@ -609,7 +609,7 @@ export const ModalRenderer: React.FC = () => {
                   </div>
 
                   {inc.comments && (
-                    <div className="p-3.5 rounded-xl bg-slate-100/80 dark:bg-slate-800 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                    <div className="p-3.5 rounded-lg bg-slate-100/80 dark:bg-slate-800 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                       <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">
                         Observaciones de la incidencia:
                       </div>
@@ -618,7 +618,7 @@ export const ModalRenderer: React.FC = () => {
                   )}
 
                   {inc.type.includes('sin_justificar') && (
-                    <div className="p-3 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 rounded-xl text-xs text-amber-800 dark:text-amber-200">
+                    <div className="p-3 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 rounded-lg text-xs text-amber-800 dark:text-amber-200">
                       Puede remitir la justificación adjuntando parte médico o volante de ausencia a través del apartado de Mensajes a la tutoría.
                     </div>
                   )}
@@ -665,12 +665,12 @@ export const ModalRenderer: React.FC = () => {
                     {srv.description}
                   </p>
 
-                  <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400">
+                  <div className="p-3.5 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400">
                     <strong className="text-slate-800 dark:text-slate-200 block mb-1">Información adicional:</strong>
                     {srv.additionalInfo}
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-brand-50/70 dark:bg-brand-950/40 border border-brand-100 dark:border-brand-900/40 flex items-center justify-between">
+                  <div className="p-3.5 rounded-lg bg-brand-50/70 dark:bg-brand-950/40 border border-brand-100 dark:border-brand-900/40 flex items-center justify-between">
                     <div>
                       <div className="text-xs font-medium text-brand-900 dark:text-brand-200">
                         Estado de inscripción para {currentStudent.name}:
@@ -701,7 +701,7 @@ export const ModalRenderer: React.FC = () => {
               const school = (modal.data as SchoolInfo) || currentStudent.school;
               return (
                 <div id="modal-school-detail" className="space-y-5">
-                  <div className="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 text-xs text-amber-800 dark:text-amber-200 flex items-start gap-2.5">
+                  <div className="p-3.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 text-xs text-amber-800 dark:text-amber-200 flex items-start gap-2.5">
                     <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
                     <div>
                       <span className="font-bold">Centro educativo asignado oficialmente:</span>
@@ -712,7 +712,7 @@ export const ModalRenderer: React.FC = () => {
                   </div>
 
                   <div className="flex items-center gap-3 pb-3 border-b border-slate-100 dark:border-slate-800">
-                    <div className="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center font-bold text-xl shadow-xs">
+                    <div className="w-12 h-12 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold text-xl shadow-xs">
                       <Building className="w-6 h-6" />
                     </div>
                     <div>
@@ -731,7 +731,7 @@ export const ModalRenderer: React.FC = () => {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                    <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
+                    <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
                       <MapPin className="w-4 h-4 text-brand-500 shrink-0 mt-0.5" />
                       <div>
                         <div className="font-bold text-slate-800 dark:text-slate-200">Dirección Oficial</div>
@@ -739,7 +739,7 @@ export const ModalRenderer: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
+                    <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
                       <Clock className="w-4 h-4 text-brand-500 shrink-0 mt-0.5" />
                       <div>
                         <div className="font-bold text-slate-800 dark:text-slate-200">Horario de Atención</div>
@@ -747,7 +747,7 @@ export const ModalRenderer: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
+                    <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
                       <Building className="w-4 h-4 text-brand-500 shrink-0 mt-0.5" />
                       <div>
                         <div className="font-bold text-slate-800 dark:text-slate-200">Teléfono y Email</div>
@@ -755,7 +755,7 @@ export const ModalRenderer: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
+                    <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
                       <User className="w-4 h-4 text-brand-500 shrink-0 mt-0.5" />
                       <div>
                         <div className="font-bold text-slate-800 dark:text-slate-200">Secretaría Administrativa</div>
@@ -764,7 +764,7 @@ export const ModalRenderer: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-brand-50/50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900/50 text-xs space-y-1.5">
+                  <div className="p-4 rounded-lg bg-brand-50/50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900/50 text-xs space-y-1.5">
                     <h4 className="font-bold text-brand-950 dark:text-brand-200 mb-1">
                       Ficha y Matrícula de {currentStudent.name}
                     </h4>
@@ -783,7 +783,7 @@ export const ModalRenderer: React.FC = () => {
                       type="button"
                       id="modal-school-close-btn"
                       onClick={closeModal}
-                      className="px-5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-xl transition-colors cursor-pointer shadow-xs"
+                      className="px-5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors cursor-pointer shadow-xs"
                     >
                       Cerrar
                     </button>
@@ -796,7 +796,7 @@ export const ModalRenderer: React.FC = () => {
             {modal.type === 'terms_conditions' && (
               <div id="modal-terms-conditions" className="space-y-4 text-left">
                 <div className="flex items-center gap-3 pb-3 border-b border-slate-200 dark:border-slate-800">
-                  <div className="p-2.5 rounded-xl bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400">
+                  <div className="p-2.5 rounded-lg bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400">
                     <ShieldCheck className="w-6 h-6" />
                   </div>
                   <div>
@@ -810,7 +810,7 @@ export const ModalRenderer: React.FC = () => {
                 </div>
 
                 <div className="space-y-3.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed pr-1 max-h-[55vh] overflow-y-auto">
-                  <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-100 dark:border-slate-800">
                     <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-1">
                       1. Objeto y Ámbito de Aplicación
                     </h4>
@@ -819,7 +819,7 @@ export const ModalRenderer: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-100 dark:border-slate-800">
                     <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-1">
                       2. Protección de Datos y Privacidad de Menores (RGPD)
                     </h4>
@@ -828,7 +828,7 @@ export const ModalRenderer: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-100 dark:border-slate-800">
                     <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-1">
                       3. Confidencialidad y Custodia de Credenciales
                     </h4>
@@ -837,7 +837,7 @@ export const ModalRenderer: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                  <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-100 dark:border-slate-800">
                     <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-1">
                       4. Propiedad Intelectual
                     </h4>
@@ -855,7 +855,7 @@ export const ModalRenderer: React.FC = () => {
                     type="button"
                     id="modal-terms-accept-btn"
                     onClick={closeModal}
-                    className="px-5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-xl transition-colors cursor-pointer shadow-xs"
+                    className="px-5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors cursor-pointer shadow-xs"
                   >
                     He leído y acepto los términos
                   </button>
@@ -867,7 +867,7 @@ export const ModalRenderer: React.FC = () => {
             {modal.type === 'forgot_password' && (
               <div id="modal-forgot-password" className="space-y-4 text-left">
                 <div className="flex items-center gap-3 pb-3 border-b border-slate-200 dark:border-slate-800">
-                  <div className="p-2.5 rounded-xl bg-orange-50 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400">
+                  <div className="p-2.5 rounded-lg bg-orange-50 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400">
                     <AlertCircle className="w-6 h-6" />
                   </div>
                   <div>
@@ -880,7 +880,7 @@ export const ModalRenderer: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-4 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 rounded-xl text-xs text-amber-900 dark:text-amber-200 leading-relaxed space-y-2">
+                <div className="p-4 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 rounded-lg text-xs text-amber-900 dark:text-amber-200 leading-relaxed space-y-2">
                   <div className="font-bold text-sm text-amber-800 dark:text-amber-300">
                     🔑 Acceso para el modo Demostración:
                   </div>
@@ -913,7 +913,7 @@ export const ModalRenderer: React.FC = () => {
                     type="button"
                     id="modal-forgot-close-btn"
                     onClick={closeModal}
-                    className="px-5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-xl transition-colors cursor-pointer shadow-xs"
+                    className="px-5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors cursor-pointer shadow-xs"
                   >
                     Entendido
                   </button>

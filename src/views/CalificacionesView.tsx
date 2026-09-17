@@ -77,7 +77,7 @@ export const CalificacionesView: React.FC = () => {
   return (
     <div id="calificaciones-section-view" className="space-y-6 pb-12">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-xs">
         <div>
           <h2 className="text-xl font-bold text-slate-900 dark:text-white font-display">
             Calificaciones y Rendimiento Académico
@@ -92,7 +92,7 @@ export const CalificacionesView: React.FC = () => {
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value)}
-            className="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
+            className="px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
           >
             <option value="2025/2026">Curso 2025 / 2026</option>
             <option value="2024/2025">Curso 2024 / 2025</option>
@@ -106,7 +106,7 @@ export const CalificacionesView: React.FC = () => {
                 'success'
               )
             }
-            className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand hover:bg-brand-hover rounded-xl shadow-xs transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand hover:bg-brand-hover rounded-lg shadow-xs transition-colors cursor-pointer"
           >
             <Download className="w-3.5 h-3.5" />
             <span>Boletín Oficial (PDF)</span>
@@ -117,16 +117,16 @@ export const CalificacionesView: React.FC = () => {
       {/* 6.1 SELECTOR DE EVALUACIÓN (EXACTAMENTE LAS 4 ESPECIFICADAS) */}
       <div
         id="evaluation-period-selector"
-        className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 p-1.5 bg-slate-100 dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700"
+        className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 p-1.5 bg-slate-100 dark:bg-slate-800/80 rounded-lg border border-slate-200 dark:border-slate-700"
       >
         {evaluationOptions.map((opt) => (
           <button
             key={opt.id}
             id={`eval-tab-${opt.id}`}
             onClick={() => setSelectedEvaluation(opt.id)}
-            className={`py-2.5 px-3 rounded-xl text-xs font-bold transition-all text-center cursor-pointer ${selectedEvaluation === opt.id
-                ? 'bg-white dark:bg-slate-900 text-brand dark:text-brand-400 shadow-xs ring-1 ring-slate-200/50 dark:ring-slate-700'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+            className={`py-2.5 px-3 rounded-lg text-xs font-bold transition-all text-center cursor-pointer ${selectedEvaluation === opt.id
+              ? 'bg-white dark:bg-slate-900 text-brand dark:text-brand-400 shadow-xs ring-1 ring-slate-200/50 dark:ring-slate-700'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
               }`}
           >
             {opt.label}
@@ -136,9 +136,9 @@ export const CalificacionesView: React.FC = () => {
 
       {/* 6.2 INDICADOR VISUAL DE RENDIMIENTO Y MEDIA */}
       {currentGrades.length > 0 && (
-        <div className="p-5 rounded-2xl bg-gradient-to-r from-brand-50 via-slate-50 to-white dark:from-brand-950/40 dark:via-slate-900 dark:to-slate-900 border border-brand-100 dark:border-brand-900/50 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="p-5 rounded-lg bg-gradient-to-r from-brand-50 via-slate-50 to-white dark:from-brand-950/40 dark:via-slate-900 dark:to-slate-900 border border-brand-100 dark:border-brand-900/50 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center font-black text-2xl font-mono shadow-md shadow-brand/20">
+            <div className="w-14 h-14 rounded-lg bg-brand text-white flex items-center justify-center font-black text-2xl font-mono shadow-md shadow-brand/20">
               {averageGrade}
             </div>
             <div>
@@ -193,7 +193,7 @@ export const CalificacionesView: React.FC = () => {
                   key={grade.id}
                   id={`grade-card-${grade.id}`}
                   onClick={() => openModal('grade_detail', grade)}
-                  className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand/40 dark:hover:border-brand/50 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+                  className="p-5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand/40 dark:hover:border-brand/50 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
                 >
                   <div>
                     {/* Subject + Score */}
@@ -220,7 +220,7 @@ export const CalificacionesView: React.FC = () => {
                     </div>
 
                     {/* Observaciones del profesor */}
-                    <div className="mt-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <div className="mt-3 p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       <strong className="text-slate-800 dark:text-slate-200 block mb-0.5 text-[11px]">
                         Observaciones del profesor:
                       </strong>

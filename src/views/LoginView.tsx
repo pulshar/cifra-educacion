@@ -129,7 +129,7 @@ export const LoginView: React.FC = () => {
                 </button>
 
                 {isLangDropdownOpen && (
-                  <div className="absolute right-0 top-7 w-36 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 py-1 z-30 animate-in fade-in zoom-in-95 duration-100">
+                  <div className="absolute right-0 top-7 w-36 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 py-1 z-30 animate-in fade-in zoom-in-95 duration-100">
                     <button
                       type="button"
                       onClick={() => {
@@ -163,7 +163,7 @@ export const LoginView: React.FC = () => {
                 type="button"
                 id="login-theme-toggle-btn"
                 onClick={toggleTheme}
-                className="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-colors cursor-pointer"
+                className="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
                 title={theme === 'light' ? 'Activar modo oscuro' : 'Activar modo claro'}
                 aria-label="Alternar tema de color"
               >

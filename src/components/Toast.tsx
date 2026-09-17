@@ -20,7 +20,7 @@ export const ToastContainer: React.FC = () => {
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
             id={`toast-${toast.id}`}
-            className="pointer-events-auto flex items-start gap-3 p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-lg text-slate-800 dark:text-slate-100"
+            className="pointer-events-auto flex items-start gap-3 p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-lg text-slate-800 dark:text-slate-100"
           >
             <div className="shrink-0 mt-0.5">
               {toast.type === 'success' && (

@@ -76,7 +76,7 @@ export const DashboardView: React.FC = () => {
           <div
             key="mod-notif"
             id="dashboard-module-notificaciones"
-            className="flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
+            className="flex flex-col bg-white dark:bg-slate-900 rounded-lg border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-start gap-2.5">
@@ -111,7 +111,7 @@ export const DashboardView: React.FC = () => {
                     key={notif.id}
                     id={`dash-notif-${notif.id}`}
                     onClick={() => openModal('notification_detail', notif)}
-                    className={`p-3 rounded-xl border transition-all cursor-pointer ${notif.read
+                    className={`p-3 rounded-lg border transition-all cursor-pointer ${notif.read
                       ? 'bg-slate-50/70 dark:bg-slate-800/40 border-slate-200/60 dark:border-slate-800/60 hover:bg-slate-100/60'
                       : 'bg-brand-50/40 dark:bg-brand-950/20 border-brand-200/80 dark:border-brand-900/40 hover:bg-brand-50/70'
                       }`}
@@ -143,7 +143,7 @@ export const DashboardView: React.FC = () => {
           <div
             key="mod-mensajes"
             id="dashboard-module-mensajes"
-            className="flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
+            className="flex flex-col bg-white dark:bg-slate-900 rounded-lg border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-start gap-2.5">
@@ -180,7 +180,7 @@ export const DashboardView: React.FC = () => {
                       key={conv.id}
                       id={`dash-conv-${conv.id}`}
                       onClick={() => navigateTo('comunicaciones', 'mensajes')}
-                      className="p-3 rounded-xl border border-slate-200/60 dark:border-slate-800/60 bg-slate-50/70 dark:bg-slate-800/40 hover:bg-slate-100/60 transition-all cursor-pointer"
+                      className="p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 bg-slate-50/70 dark:bg-slate-800/40 hover:bg-slate-100/60 transition-all cursor-pointer"
                     >
                       <div className="flex items-center gap-2.5">
                         <img
@@ -214,7 +214,7 @@ export const DashboardView: React.FC = () => {
           <div
             key="mod-circulares"
             id="dashboard-module-circulares"
-            className="flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
+            className="flex flex-col bg-white dark:bg-slate-900 rounded-lg border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-start gap-2.5">
@@ -249,7 +249,7 @@ export const DashboardView: React.FC = () => {
                     key={circ.id}
                     id={`dash-circ-${circ.id}`}
                     onClick={() => openModal('circular_detail', circ)}
-                    className="p-3 rounded-xl border border-slate-200/60 dark:border-slate-800/60 bg-slate-50/70 dark:bg-slate-800/40 hover:bg-slate-100/60 transition-all cursor-pointer"
+                    className="p-3 rounded-lg border border-slate-200/60 dark:border-slate-800/60 bg-slate-50/70 dark:bg-slate-800/40 hover:bg-slate-100/60 transition-all cursor-pointer"
                   >
                     <div className="flex items-start justify-between gap-2">
                       <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200 line-clamp-1">
@@ -278,7 +278,7 @@ export const DashboardView: React.FC = () => {
           <div
             key="mod-eventos"
             id="dashboard-module-eventos-proximos"
-            className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
+            className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-start gap-2.5">
@@ -313,7 +313,7 @@ export const DashboardView: React.FC = () => {
                     key={ev.id}
                     id={`dash-event-${ev.id}`}
                     onClick={() => openModal('event_detail', ev)}
-                    className="p-3.5 rounded-xl border border-slate-200/70 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 hover:border-brand/40 dark:hover:border-brand/50 transition-all cursor-pointer group"
+                    className="p-3.5 rounded-lg border border-slate-200/70 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 hover:border-brand/40 dark:hover:border-brand/50 transition-all cursor-pointer group"
                   >
                     <div className="flex items-center justify-between mb-2">
                       <span
@@ -355,7 +355,7 @@ export const DashboardView: React.FC = () => {
           <div
             key="mod-clases"
             id="dashboard-module-proximas-clases"
-            className="flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
+            className="flex flex-col bg-white dark:bg-slate-900 rounded-lg border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-start gap-2.5">
@@ -390,7 +390,7 @@ export const DashboardView: React.FC = () => {
                     key={cls.id}
                     id={`dash-class-${cls.id}`}
                     onClick={() => openModal('event_detail', cls)}
-                    className="flex items-center justify-between p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 hover:bg-slate-100/60 transition-colors cursor-pointer"
+                    className="flex items-center justify-between p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 hover:bg-slate-100/60 transition-colors cursor-pointer"
                   >
                     <div className="flex items-center gap-3">
                       <div className="w-14 text-center py-1 px-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-mono text-[11px] font-bold">
@@ -419,7 +419,7 @@ export const DashboardView: React.FC = () => {
           <div
             key="mod-factura"
             id="dashboard-module-ultima-factura"
-            className="flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
+            className="flex flex-col bg-white dark:bg-slate-900 rounded-lg border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-start gap-2.5">
@@ -452,7 +452,7 @@ export const DashboardView: React.FC = () => {
                 <div
                   id={`dash-inv-${latestInvoice.id}`}
                   onClick={() => openModal('invoice_detail', latestInvoice)}
-                  className="p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/40 hover:border-brand/40 dark:hover:border-brand/50 transition-all cursor-pointer"
+                  className="p-4 rounded-lg border border-slate-200/80 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/40 hover:border-brand/40 dark:hover:border-brand/50 transition-all cursor-pointer"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs font-mono font-bold text-slate-600 dark:text-slate-300">
@@ -491,7 +491,7 @@ export const DashboardView: React.FC = () => {
           <div
             key="mod-asistencia"
             id="dashboard-module-graficas-asistencia"
-            className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
+            className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-md transition-shadow p-5"
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-start gap-2.5">
@@ -521,9 +521,9 @@ export const DashboardView: React.FC = () => {
               {/* Metric 1: Total Ausencias */}
               <div
                 onClick={() => navigateTo('asistencia')}
-                className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 flex items-center gap-4 cursor-pointer hover:bg-slate-100/60 transition-colors"
+                className="p-4 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-800 flex items-center gap-4 cursor-pointer hover:bg-slate-100/60 transition-colors"
               >
-                <div className="w-10 h-10 shrink-0 hidden sm:flex rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center font-bold">
+                <div className="w-10 h-10 shrink-0 hidden sm:flex rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center font-bold">
                   {attendanceMetrics.totalAbsences}
                 </div>
                 <div>
@@ -537,9 +537,9 @@ export const DashboardView: React.FC = () => {
               {/* Metric 2: Sin justificar */}
               <div
                 onClick={() => navigateTo('asistencia')}
-                className="p-4 rounded-xl bg-rose-50/50 dark:bg-rose-950/20 border border-rose-200/70 dark:border-rose-900/40 flex items-center gap-4 cursor-pointer hover:bg-rose-50/80 transition-colors"
+                className="p-4 rounded-lg bg-rose-50/50 dark:bg-rose-950/20 border border-rose-200/70 dark:border-rose-900/40 flex items-center gap-4 cursor-pointer hover:bg-rose-50/80 transition-colors"
               >
-                <div className="w-10 h-10 shrink-0 hidden sm:flex rounded-xl bg-rose-100 dark:bg-rose-950/80 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold">
+                <div className="w-10 h-10 shrink-0 hidden sm:flex rounded-lg bg-rose-100 dark:bg-rose-950/80 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold">
                   {attendanceMetrics.unjustified}
                 </div>
                 <div>
@@ -555,9 +555,9 @@ export const DashboardView: React.FC = () => {
               {/* Metric 3: Retrasos */}
               <div
                 onClick={() => navigateTo('asistencia')}
-                className="p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 flex items-center gap-4 cursor-pointer hover:bg-amber-50/80 transition-colors"
+                className="p-4 rounded-lg bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 flex items-center gap-4 cursor-pointer hover:bg-amber-50/80 transition-colors"
               >
-                <div className="w-10 h-10 shrink-0 hidden sm:flex rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+                <div className="w-10 h-10 shrink-0 hidden sm:flex rounded-lg bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
                   {attendanceMetrics.late}
                 </div>
                 <div>
@@ -603,7 +603,7 @@ export const DashboardView: React.FC = () => {
       {/* Cabecera: Hola, María | Alumno: Lucía García ▾ */}
       <div
         id="dashboard-header-card"
-        className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-brand-900 via-brand-600 to-brand-900 text-white shadow-md relative overflow-hidden border border-brand-900/40"
+        className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 sm:p-6 rounded-lg bg-gradient-to-r from-brand-900 via-brand-600 to-brand-900 text-white shadow-md relative overflow-hidden border border-brand-900/40"
       >
         <div className="relative z-10">
           <div className="flex flex-wrap items-center gap-2 text-brand-200 text-xs font-medium mb-1">
@@ -636,7 +636,7 @@ export const DashboardView: React.FC = () => {
           <button
             id="dash-btn-configure-home"
             onClick={() => navigateTo('configuracion', 'configurar_inicio')}
-            className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-xs border border-white/20 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg bg-white/10 hover:bg-white/20 text-white backdrop-blur-xs border border-white/20 transition-colors cursor-pointer"
             title="Personalizar módulos de la pantalla de inicio"
           >
             <Sliders className="w-3.5 h-3.5" />
@@ -651,8 +651,8 @@ export const DashboardView: React.FC = () => {
 
       {/* Dynamic Ordered Modules Grid */}
       {activeModules.length === 0 ? (
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-10 text-center max-w-md mx-auto my-8 shadow-xs">
-          <div className="w-14 h-14 rounded-2xl bg-brand-50 dark:bg-brand-950/60 text-brand dark:text-brand-400 flex items-center justify-center mx-auto mb-3">
+        <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-10 text-center max-w-md mx-auto my-8 shadow-xs">
+          <div className="w-14 h-14 rounded-lg bg-brand-50 dark:bg-brand-950/60 text-brand dark:text-brand-400 flex items-center justify-center mx-auto mb-3">
             <Sliders className="w-7 h-7" />
           </div>
           <h3 className="text-base font-bold text-slate-900 dark:text-slate-100">
@@ -664,7 +664,7 @@ export const DashboardView: React.FC = () => {
           <button
             id="dash-btn-config-empty"
             onClick={() => navigateTo('configuracion', 'configurar_inicio')}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-brand hover:bg-brand-hover shadow-xs transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-brand hover:bg-brand-hover shadow-xs transition-colors cursor-pointer"
           >
             <Sliders className="w-4 h-4" />
             <span>Configurar Pantalla de Inicio</span>

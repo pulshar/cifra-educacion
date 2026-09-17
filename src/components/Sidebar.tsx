@@ -166,11 +166,8 @@ export const Sidebar: React.FC = () => {
                             C
                         </div>
                         <div>
-                            <div className="font-bold text-base text-slate-900 dark:text-white font-display flex items-center gap-1.5">
+                            <div className="font-bold text-xl text-slate-900 dark:text-white font-display flex items-center gap-1.5">
                                 <span>Cifra</span>
-                                <span className="text-brand-600 dark:text-brand-400 font-medium text-xs tracking-normal px-1.5 py-0.5 rounded-md bg-brand-50 dark:bg-brand-950/60">
-                                    educación
-                                </span>
                             </div>
                             <span className="text-[10px] text-slate-400 block font-medium">Portal Familias</span>
                         </div>

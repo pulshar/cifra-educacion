@@ -65,7 +65,7 @@ export const AsistenciaView: React.FC = () => {
   return (
     <div id="asistencia-section-view" className="space-y-6 pb-12">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-xs">
         <div>
           <h2 className="text-xl font-bold text-slate-900 dark:text-white font-display">
             Control de Asistencia y Puntualidad
@@ -89,7 +89,7 @@ export const AsistenciaView: React.FC = () => {
               justified: false,
             })
           }
-          className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-xs transition-colors cursor-pointer"
+          className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-xs transition-colors cursor-pointer"
         >
           <PlusCircle className="w-4 h-4" />
           <span>Notificar Ausencia Prevista</span>
@@ -99,7 +99,7 @@ export const AsistenciaView: React.FC = () => {
       {/* 7.1 INDICADORES DE ASISTENCIA */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Total Ausencias */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
+        <div className="p-4 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500">Total Ausencias</span>
             <div className="w-8 h-8 rounded-lg bg-brand-50 dark:bg-brand-950/60 text-brand-600 flex items-center justify-center">
@@ -113,7 +113,7 @@ export const AsistenciaView: React.FC = () => {
         </div>
 
         {/* Justificadas */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
+        <div className="p-4 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500">Justificadas</span>
             <div className="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 flex items-center justify-center">
@@ -129,7 +129,7 @@ export const AsistenciaView: React.FC = () => {
         </div>
 
         {/* Sin Justificar */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
+        <div className="p-4 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500">Sin Justificar</span>
             <div className="w-8 h-8 rounded-lg bg-rose-50 dark:bg-rose-950/60 text-rose-600 flex items-center justify-center">
@@ -145,7 +145,7 @@ export const AsistenciaView: React.FC = () => {
         </div>
 
         {/* Retrasos */}
-        <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
+        <div className="p-4 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500">Retrasos</span>
             <div className="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/60 text-amber-600 flex items-center justify-center">
@@ -162,7 +162,7 @@ export const AsistenciaView: React.FC = () => {
       </div>
 
       {/* 7.2 LISTADO DETALLADO CON FILTROS */}
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
         <div className="flex items-center gap-2 overflow-x-auto">
           <Filter className="w-4 h-4 text-slate-400 shrink-0 ml-1" />
           {[
@@ -175,8 +175,8 @@ export const AsistenciaView: React.FC = () => {
               key={f.id}
               onClick={() => setTypeFilter(f.id)}
               className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer ${typeFilter === f.id
-                  ? 'bg-brand-600 text-white'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200'
+                ? 'bg-brand-600 text-white'
+                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200'
                 }`}
             >
               {f.label}
@@ -187,7 +187,7 @@ export const AsistenciaView: React.FC = () => {
         <select
           value={monthFilter}
           onChange={(e) => setMonthFilter(e.target.value)}
-          className="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200"
+          className="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200"
         >
           <option value="todos">Todos los meses</option>
           <option value="09">Septiembre 2026</option>
@@ -199,7 +199,7 @@ export const AsistenciaView: React.FC = () => {
       {filteredRecords.length === 0 ? (
         <EmptyState title="No constan incidencias de asistencia con estos filtros" />
       ) : (
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
+        <div className="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
               <thead className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-slate-500 font-bold uppercase tracking-wider text-[10px]">
@@ -234,7 +234,7 @@ export const AsistenciaView: React.FC = () => {
                         <button
                           id={`btn-justify-${rec.id}`}
                           onClick={() => openModal('justify_absence', rec)}
-                          className="px-3 py-1.5 text-xs font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/60 hover:bg-brand-100 dark:hover:bg-brand-900/60 rounded-xl transition-colors cursor-pointer"
+                          className="px-3 py-1.5 text-xs font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/60 hover:bg-brand-100 dark:hover:bg-brand-900/60 rounded-lg transition-colors cursor-pointer"
                         >
                           Justificar ahora
                         </button>

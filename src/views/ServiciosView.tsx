@@ -36,7 +36,7 @@ export const ServiciosView: React.FC = () => {
   return (
     <div id="servicios-section-view" className="space-y-6 pb-12">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-xs">
         <div>
           <h2 className="text-xl font-bold text-slate-900 dark:text-white font-display">
             Servicios Complementarios y Actividades
@@ -56,13 +56,13 @@ export const ServiciosView: React.FC = () => {
             <div
               key={service.id}
               id={`service-card-${service.id}`}
-              className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+              className="p-6 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
             >
               <div>
                 {/* Header: Icon, Name, Active State */}
                 <div className="flex items-start justify-between gap-2 mb-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 flex items-center justify-center">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
@@ -77,8 +77,8 @@ export const ServiciosView: React.FC = () => {
 
                   <span
                     className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold ${service.active
-                        ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300'
-                        : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'
+                      ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300'
+                      : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'
                       }`}
                   >
                     {service.active ? (
@@ -98,7 +98,7 @@ export const ServiciosView: React.FC = () => {
                 </p>
 
                 {/* Specific details depending on service */}
-                <div className="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 text-xs space-y-2">
+                <div className="mt-4 p-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 text-xs space-y-2">
                   {service.schedule && (
                     <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
                       <Clock className="w-3.5 h-3.5 text-brand-500 shrink-0" />
@@ -153,7 +153,7 @@ export const ServiciosView: React.FC = () => {
                 <button
                   id={`btn-manage-service-${service.id}`}
                   onClick={() => openModal('service_manage', service)}
-                  className="w-full py-2 px-3 rounded-xl text-xs font-bold text-brand-700 dark:text-brand-300 bg-brand-50 dark:bg-brand-950/60 hover:bg-brand-100 dark:hover:bg-brand-900/60 transition-colors cursor-pointer text-center"
+                  className="w-full py-2 px-3 rounded-lg text-xs font-bold text-brand-700 dark:text-brand-300 bg-brand-50 dark:bg-brand-950/60 hover:bg-brand-100 dark:hover:bg-brand-900/60 transition-colors cursor-pointer text-center"
                 >
                   Solicitar Baja o Modificación
                 </button>
