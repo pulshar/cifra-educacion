@@ -1,0 +1,6 @@
+{
+  "name": "Cifra educación",
+  "description": "Plataforma web educativa moderna y responsive para familias del centro educativo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
