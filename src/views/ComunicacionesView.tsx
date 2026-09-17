@@ -143,11 +143,10 @@ export const ComunicacionesView: React.FC = () => {
           <button
             id="tab-btn-notificaciones"
             onClick={() => setComunicacionesSubSection('notificaciones')}
-            className={`flex items-center w-full justify-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 sm:border-0 text-xs font-bold transition-all cursor-pointer ${
-              comunicacionesSubSection === 'notificaciones'
-                ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
-            }`}
+            className={`flex items-center w-full justify-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 sm:border-0 text-xs font-bold transition-all cursor-pointer ${comunicacionesSubSection === 'notificaciones'
+              ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
+              }`}
           >
             <Bell className="w-3.5 h-3.5" />
             <span>Notificaciones</span>
@@ -161,11 +160,10 @@ export const ComunicacionesView: React.FC = () => {
           <button
             id="tab-btn-mensajes"
             onClick={() => setComunicacionesSubSection('mensajes')}
-            className={`flex items-center w-full justify-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 sm:border-0 text-xs font-bold transition-all cursor-pointer ${
-              comunicacionesSubSection === 'mensajes'
-                ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
-            }`}
+            className={`flex items-center w-full justify-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 sm:border-0 text-xs font-bold transition-all cursor-pointer ${comunicacionesSubSection === 'mensajes'
+              ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
+              }`}
           >
             <Mail className="w-3.5 h-3.5" />
             <span>Mensajes</span>
@@ -179,11 +177,10 @@ export const ComunicacionesView: React.FC = () => {
           <button
             id="tab-btn-circulares"
             onClick={() => setComunicacionesSubSection('circulares')}
-            className={`flex items-center w-full justify-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 sm:border-0 text-xs font-bold transition-all cursor-pointer ${
-              comunicacionesSubSection === 'circulares'
-                ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
-            }`}
+            className={`flex items-center w-full justify-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 sm:border-0 text-xs font-bold transition-all cursor-pointer ${comunicacionesSubSection === 'circulares'
+              ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
+              }`}
           >
             <FileCheck className="w-3.5 h-3.5" />
             <span>Circulares</span>
@@ -236,11 +233,10 @@ export const ComunicacionesView: React.FC = () => {
               <button
                 key={cat.id}
                 onClick={() => setNotifCategory(cat.id)}
-                className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer ${
-                  notifCategory === cat.id
-                    ? 'bg-brand text-white'
-                    : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-50'
-                }`}
+                className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer ${notifCategory === cat.id
+                  ? 'bg-brand text-white'
+                  : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-50'
+                  }`}
               >
                 {cat.label}
               </button>
@@ -257,19 +253,17 @@ export const ComunicacionesView: React.FC = () => {
                   key={notif.id}
                   id={`notif-card-${notif.id}`}
                   onClick={() => openModal('notification_detail', notif)}
-                  className={`p-4 rounded-xl border transition-all cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 ${
-                    notif.read
-                      ? 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/40'
-                      : 'bg-brand-50/50 dark:bg-brand-950/30 border-brand-200/80 dark:border-brand-900/60 shadow-xs'
-                  }`}
+                  className={`p-4 rounded-xl border transition-all cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 ${notif.read
+                    ? 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/40'
+                    : 'bg-brand-50/50 dark:bg-brand-950/30 border-brand-200/80 dark:border-brand-900/60 shadow-xs'
+                    }`}
                 >
                   <div className="flex items-start gap-3">
                     <div
-                      className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${
-                        notif.read
-                          ? 'bg-slate-100 dark:bg-slate-800 text-slate-500'
-                          : 'bg-brand text-white'
-                      }`}
+                      className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${notif.read
+                        ? 'bg-slate-100 dark:bg-slate-800 text-slate-500'
+                        : 'bg-brand text-white'
+                        }`}
                     >
                       <Bell className="w-4 h-4" />
                     </div>
@@ -351,11 +345,10 @@ export const ComunicacionesView: React.FC = () => {
 
               <button
                 onClick={() => setOnlyImportant((p) => !p)}
-                className={`p-2 rounded-xl text-xs font-medium border transition-colors cursor-pointer ${
-                  onlyImportant
-                    ? 'bg-amber-50 dark:bg-amber-950/40 text-amber-700 border-amber-300 dark:border-amber-700'
-                    : 'text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:bg-slate-50'
-                }`}
+                className={`p-2 rounded-xl text-xs font-medium border transition-colors cursor-pointer ${onlyImportant
+                  ? 'bg-amber-50 dark:bg-amber-950/40 text-amber-700 border-amber-300 dark:border-amber-700'
+                  : 'text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:bg-slate-50'
+                  }`}
                 title="Filtrar importantes"
               >
                 <Star className={`w-4 h-4 ${onlyImportant ? 'fill-amber-400 text-amber-500' : ''}`} />
@@ -392,11 +385,10 @@ export const ComunicacionesView: React.FC = () => {
                       key={conv.id}
                       id={`conversation-item-${conv.id}`}
                       onClick={() => setSelectedConversationId(conv.id)}
-                      className={`p-3.5 flex items-start gap-3 transition-colors cursor-pointer ${
-                        isSelected
-                          ? 'bg-brand-50/80 dark:bg-brand-950/50 border-l-4 border-brand'
-                          : 'hover:bg-slate-50 dark:hover:bg-slate-800/40'
-                      }`}
+                      className={`p-3.5 flex items-start gap-3 transition-colors cursor-pointer ${isSelected
+                        ? 'bg-brand-50/80 dark:bg-brand-950/50 border-l-4 border-brand'
+                        : 'hover:bg-slate-50 dark:hover:bg-slate-800/40'
+                        }`}
                     >
                       <img
                         src={conv.avatar}
@@ -430,9 +422,8 @@ export const ComunicacionesView: React.FC = () => {
                         title="Marcar como importante"
                       >
                         <Star
-                          className={`w-3.5 h-3.5 ${
-                            conv.important ? 'fill-amber-400 text-amber-500' : ''
-                          }`}
+                          className={`w-3.5 h-3.5 ${conv.important ? 'fill-amber-400 text-amber-500' : ''
+                            }`}
                         />
                       </button>
                     </div>
@@ -493,11 +484,10 @@ export const ComunicacionesView: React.FC = () => {
                         </div>
 
                         <div
-                          className={`max-w-[85%] p-3.5 rounded-2xl text-xs leading-relaxed shadow-xs ${
-                            isMe
-                              ? 'bg-brand text-white rounded-br-xs'
-                              : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-bl-xs border border-slate-200/80 dark:border-slate-700'
-                          }`}
+                          className={`max-w-[85%] p-3.5 rounded-2xl text-xs leading-relaxed shadow-xs ${isMe
+                            ? 'bg-brand text-white rounded-br-xs'
+                            : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-bl-xs border border-slate-200/80 dark:border-slate-700'
+                            }`}
                         >
                           <p className="whitespace-pre-line">{msg.text}</p>
 
@@ -595,16 +585,16 @@ export const ComunicacionesView: React.FC = () => {
                     markCircularAsRead(circ.id);
                     openModal('circular_detail', circ);
                   }}
-                  className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group"
+                  className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-400 dark:hover:border-brand-600 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-2">
-                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300">
+                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300">
                         {circ.category}
                       </span>
                       <div className="flex items-center gap-2">
                         {!circ.read && (
-                          <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                          <span className="w-2 h-2 rounded-full bg-brand-500"></span>
                         )}
                         <span className="text-xs text-slate-400 flex items-center gap-1">
                           <Calendar className="w-3.5 h-3.5" /> {circ.date}
@@ -612,7 +602,7 @@ export const ComunicacionesView: React.FC = () => {
                       </div>
                     </div>
 
-                    <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">
+                    <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 transition-colors">
                       {circ.title}
                     </h3>
                     <p className="text-xs text-slate-600 dark:text-slate-300 mt-2 line-clamp-3 leading-relaxed">
@@ -624,7 +614,7 @@ export const ComunicacionesView: React.FC = () => {
                     <span className="text-slate-400 flex items-center gap-1">
                       <Building className="w-3.5 h-3.5" /> {circ.author}
                     </span>
-                    <span className="text-emerald-600 dark:text-emerald-400 font-semibold group-hover:underline">
+                    <span className="text-brand-600 dark:text-brand-400 font-semibold group-hover:underline">
                       Abrir circular completa →
                     </span>
                   </div>
