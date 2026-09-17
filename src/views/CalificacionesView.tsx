@@ -58,7 +58,7 @@ export const CalificacionesView: React.FC = () => {
     }
     if (score >= 6) {
       return {
-        bg: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950/60 dark:text-indigo-300',
+        bg: 'bg-brand-100 text-brand-800 dark:bg-brand-950/60 dark:text-brand-300',
         label: 'Bien',
       };
     }
@@ -124,11 +124,10 @@ export const CalificacionesView: React.FC = () => {
             key={opt.id}
             id={`eval-tab-${opt.id}`}
             onClick={() => setSelectedEvaluation(opt.id)}
-            className={`py-2.5 px-3 rounded-xl text-xs font-bold transition-all text-center cursor-pointer ${
-              selectedEvaluation === opt.id
+            className={`py-2.5 px-3 rounded-xl text-xs font-bold transition-all text-center cursor-pointer ${selectedEvaluation === opt.id
                 ? 'bg-white dark:bg-slate-900 text-brand dark:text-brand-400 shadow-xs ring-1 ring-slate-200/50 dark:ring-slate-700'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
-            }`}
+              }`}
           >
             {opt.label}
           </button>

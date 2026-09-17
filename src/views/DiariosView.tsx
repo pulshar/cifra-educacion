@@ -87,7 +87,7 @@ export const DiariosView: React.FC = () => {
             placeholder="Buscar en tareas o contenidos..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500"
+            className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-brand-500"
           />
         </div>
       </div>
@@ -106,7 +106,7 @@ export const DiariosView: React.FC = () => {
               {/* Header row: Subject, Teacher, Date */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+                  <div className="w-9 h-9 rounded-xl bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold">
                     <BookOpen className="w-4 h-4" />
                   </div>
                   <div>
@@ -120,7 +120,7 @@ export const DiariosView: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 self-start sm:self-auto bg-slate-50 dark:bg-slate-800 px-3 py-1 rounded-lg">
-                  <Calendar className="w-3.5 h-3.5 text-indigo-500" />
+                  <Calendar className="w-3.5 h-3.5 text-brand-500" />
                   <span>{diary.date}</span>
                 </div>
               </div>
