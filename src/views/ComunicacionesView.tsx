@@ -145,14 +145,14 @@ export const ComunicacionesView: React.FC = () => {
             onClick={() => setComunicacionesSubSection('notificaciones')}
             className={`flex items-center w-full justify-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 sm:border-0 text-xs font-bold transition-all cursor-pointer ${
               comunicacionesSubSection === 'notificaciones'
-                ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 shadow-xs'
+                ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
             <Bell className="w-3.5 h-3.5" />
             <span>Notificaciones</span>
             {unreadNotificationsCount > 0 && (
-              <span className="px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-indigo-600 text-white">
+              <span className="px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-brand text-white">
                 {unreadNotificationsCount}
               </span>
             )}
@@ -163,14 +163,14 @@ export const ComunicacionesView: React.FC = () => {
             onClick={() => setComunicacionesSubSection('mensajes')}
             className={`flex items-center w-full justify-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 sm:border-0 text-xs font-bold transition-all cursor-pointer ${
               comunicacionesSubSection === 'mensajes'
-                ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 shadow-xs'
+                ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
             <Mail className="w-3.5 h-3.5" />
             <span>Mensajes</span>
             {unreadMessagesCount > 0 && (
-              <span className="px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-sky-600 text-white">
+              <span className="px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-brand text-white">
                 {unreadMessagesCount}
               </span>
             )}
@@ -181,14 +181,14 @@ export const ComunicacionesView: React.FC = () => {
             onClick={() => setComunicacionesSubSection('circulares')}
             className={`flex items-center w-full justify-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 sm:border-0 text-xs font-bold transition-all cursor-pointer ${
               comunicacionesSubSection === 'circulares'
-                ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 shadow-xs'
+                ? 'bg-slate-100 dark:bg-slate-800 sm:bg-white sm:dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
             <FileCheck className="w-3.5 h-3.5" />
             <span>Circulares</span>
             {unreadCircularesCount > 0 && (
-              <span className="px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-emerald-600 text-white">
+              <span className="px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-brand text-white">
                 {unreadCircularesCount}
               </span>
             )}
@@ -210,7 +210,7 @@ export const ComunicacionesView: React.FC = () => {
                 placeholder="Buscar en notificaciones..."
                 value={notifSearch}
                 onChange={(e) => setNotifSearch(e.target.value)}
-                className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500"
+                className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
               />
             </div>
 
@@ -221,7 +221,7 @@ export const ComunicacionesView: React.FC = () => {
               <button
                 id="btn-mark-all-read"
                 onClick={markAllNotificationsAsRead}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 rounded-lg transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/50 rounded-lg transition-colors cursor-pointer"
               >
                 <CheckCheck className="w-4 h-4" />
                 <span>Marcar todas como leídas</span>
@@ -238,7 +238,7 @@ export const ComunicacionesView: React.FC = () => {
                 onClick={() => setNotifCategory(cat.id)}
                 className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer ${
                   notifCategory === cat.id
-                    ? 'bg-indigo-600 text-white'
+                    ? 'bg-brand text-white'
                     : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-50'
                 }`}
               >
@@ -260,7 +260,7 @@ export const ComunicacionesView: React.FC = () => {
                   className={`p-4 rounded-xl border transition-all cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 ${
                     notif.read
                       ? 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/40'
-                      : 'bg-indigo-50/50 dark:bg-indigo-950/30 border-indigo-200 dark:border-indigo-900/60 shadow-xs'
+                      : 'bg-brand-50/50 dark:bg-brand-950/30 border-brand-200/80 dark:border-brand-900/60 shadow-xs'
                   }`}
                 >
                   <div className="flex items-start gap-3">
@@ -268,7 +268,7 @@ export const ComunicacionesView: React.FC = () => {
                       className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${
                         notif.read
                           ? 'bg-slate-100 dark:bg-slate-800 text-slate-500'
-                          : 'bg-indigo-600 text-white'
+                          : 'bg-brand text-white'
                       }`}
                     >
                       <Bell className="w-4 h-4" />
@@ -279,7 +279,7 @@ export const ComunicacionesView: React.FC = () => {
                           {notif.title}
                         </h4>
                         {!notif.read && (
-                          <span className="px-2 py-0.2 rounded-full text-[10px] font-bold bg-indigo-600 text-white">
+                          <span className="px-2 py-0.2 rounded-full text-[10px] font-bold bg-brand text-white">
                             Nueva
                           </span>
                         )}
@@ -316,7 +316,7 @@ export const ComunicacionesView: React.FC = () => {
                         e.stopPropagation();
                         openModal('notification_detail', notif);
                       }}
-                      className="px-3 py-1.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/60 rounded-lg"
+                      className="px-3 py-1.5 text-xs font-semibold text-brand dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/60 rounded-lg"
                     >
                       Abrir detalle
                     </button>
@@ -343,7 +343,7 @@ export const ComunicacionesView: React.FC = () => {
               <button
                 id="btn-new-message-composer"
                 onClick={() => openModal('new_message')}
-                className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-xs transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand hover:bg-brand-hover rounded-xl shadow-xs transition-colors cursor-pointer"
               >
                 <Plus className="w-4 h-4" />
                 <span>Nuevo mensaje</span>
@@ -371,7 +371,7 @@ export const ComunicacionesView: React.FC = () => {
                   placeholder="Buscar en mensajes o remitentes..."
                   value={messageSearch}
                   onChange={(e) => setMessageSearch(e.target.value)}
-                  className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500"
+                  className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
                 />
               </div>
             </div>
@@ -394,7 +394,7 @@ export const ComunicacionesView: React.FC = () => {
                       onClick={() => setSelectedConversationId(conv.id)}
                       className={`p-3.5 flex items-start gap-3 transition-colors cursor-pointer ${
                         isSelected
-                          ? 'bg-indigo-50/80 dark:bg-indigo-950/50 border-l-4 border-indigo-600'
+                          ? 'bg-brand-50/80 dark:bg-brand-950/50 border-l-4 border-brand'
                           : 'hover:bg-slate-50 dark:hover:bg-slate-800/40'
                       }`}
                     >
@@ -495,14 +495,14 @@ export const ComunicacionesView: React.FC = () => {
                         <div
                           className={`max-w-[85%] p-3.5 rounded-2xl text-xs leading-relaxed shadow-xs ${
                             isMe
-                              ? 'bg-indigo-600 text-white rounded-br-xs'
+                              ? 'bg-brand text-white rounded-br-xs'
                               : 'bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-bl-xs border border-slate-200/80 dark:border-slate-700'
                           }`}
                         >
                           <p className="whitespace-pre-line">{msg.text}</p>
 
                           {msg.attachments && msg.attachments.length > 0 && (
-                            <div className="mt-3 pt-2 border-t border-indigo-400/40 dark:border-slate-700 space-y-1.5">
+                            <div className="mt-3 pt-2 border-t border-brand-400/40 dark:border-slate-700 space-y-1.5">
                               {msg.attachments.map((att) => (
                                 <div
                                   key={att.id}
@@ -532,7 +532,7 @@ export const ComunicacionesView: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => showToast('Seleccione un archivo del explorador...', 'info')}
-                    className="p-2 text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                    className="p-2 text-slate-400 hover:text-brand dark:hover:text-brand-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
                     title="Adjuntar archivo"
                   >
                     <Paperclip className="w-4 h-4" />
@@ -542,11 +542,11 @@ export const ComunicacionesView: React.FC = () => {
                     placeholder="Escriba su respuesta a la tutoría..."
                     value={replyText}
                     onChange={(e) => setReplyText(e.target.value)}
-                    className="flex-1 px-3 py-2 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500"
+                    className="flex-1 px-3 py-2 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
                   />
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-xs transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-white bg-brand hover:bg-brand-hover rounded-xl shadow-xs transition-colors cursor-pointer"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>Responder</span>
@@ -575,7 +575,7 @@ export const ComunicacionesView: React.FC = () => {
                 placeholder="Buscar circulares publicadas por el centro..."
                 value={circularSearch}
                 onChange={(e) => setCircularSearch(e.target.value)}
-                className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500"
+                className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
               />
             </div>
             <span className="text-xs text-slate-500">

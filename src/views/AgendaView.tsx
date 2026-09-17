@@ -102,7 +102,7 @@ export const AgendaView: React.FC = () => {
             onClick={() => setViewMode('dia')}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
               viewMode === 'dia'
-                ? 'bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 shadow-xs'
+                ? 'bg-white dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
@@ -113,7 +113,7 @@ export const AgendaView: React.FC = () => {
             onClick={() => setViewMode('semana')}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
               viewMode === 'semana'
-                ? 'bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 shadow-xs'
+                ? 'bg-white dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
@@ -124,7 +124,7 @@ export const AgendaView: React.FC = () => {
             onClick={() => setViewMode('mes')}
             className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
               viewMode === 'mes'
-                ? 'bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 shadow-xs'
+                ? 'bg-white dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
             }`}
           >
@@ -143,7 +143,7 @@ export const AgendaView: React.FC = () => {
             onClick={() => setSelectedFilter(opt.id)}
             className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer ${
               selectedFilter === opt.id
-                ? 'bg-indigo-600 text-white shadow-xs'
+                ? 'bg-brand text-white shadow-xs'
                 : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-50'
             }`}
           >
@@ -157,7 +157,7 @@ export const AgendaView: React.FC = () => {
         <div id="agenda-day-view-container" className="space-y-4">
           <div className="flex items-center justify-between px-4 py-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/80 dark:border-slate-800">
             <div className="flex items-center gap-2">
-              <CalendarIcon className="w-4 h-4 text-indigo-500" />
+              <CalendarIcon className="w-4 h-4 text-brand" />
               <span className="text-sm font-bold text-slate-800 dark:text-slate-100">
                 Miércoles, 16 de Septiembre de 2026
               </span>
@@ -176,12 +176,12 @@ export const AgendaView: React.FC = () => {
                   key={ev.id}
                   id={`agenda-event-${ev.id}`}
                   onClick={() => openModal('event_detail', ev)}
-                  className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-400 dark:hover:border-indigo-600 hover:shadow-xs transition-all cursor-pointer"
+                  className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand/40 dark:hover:border-brand/50 hover:shadow-xs transition-all cursor-pointer"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-3">
                       <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-mono font-bold">
-                        <Clock className="w-3.5 h-3.5 text-indigo-500" />
+                        <Clock className="w-3.5 h-3.5 text-brand" />
                         <span>{ev.startTime} - {ev.endTime}</span>
                       </div>
                       <h3 className="text-base font-bold text-slate-900 dark:text-white">
@@ -234,7 +234,7 @@ export const AgendaView: React.FC = () => {
                   key={d.dayNum}
                   className={`p-2 rounded-lg ${
                     d.dayNum === 3
-                      ? 'bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300'
+                      ? 'bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 font-bold'
                       : 'text-slate-600 dark:text-slate-300'
                   }`}
                 >
@@ -330,14 +330,14 @@ export const AgendaView: React.FC = () => {
                     onClick={() => setSelectedDateStr(dayStr)}
                     className={`min-h-[64px] p-2 rounded-xl text-left flex flex-col justify-between border transition-all cursor-pointer ${
                       isSelected
-                        ? 'border-indigo-600 bg-indigo-50/70 dark:bg-indigo-950/50 ring-2 ring-indigo-500/20'
+                        ? 'border-brand bg-brand-50/70 dark:bg-brand-950/50 ring-2 ring-brand/20'
                         : 'border-slate-100 dark:border-slate-800/80 hover:bg-slate-50 dark:hover:bg-slate-800/40'
                     }`}
                   >
                     <span
                       className={`text-xs font-bold ${
                         isSelected
-                          ? 'text-indigo-600 dark:text-indigo-400'
+                          ? 'text-brand dark:text-brand-400'
                           : 'text-slate-700 dark:text-slate-300'
                       }`}
                     >
@@ -345,7 +345,7 @@ export const AgendaView: React.FC = () => {
                     </span>
                     {hasEvents && (
                       <div className="flex gap-1 flex-wrap mt-1">
-                        <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
+                        <span className="w-2 h-2 rounded-full bg-brand"></span>
                         {dayNum === 19 && <span className="w-2 h-2 rounded-full bg-rose-500"></span>}
                         {dayNum === 17 && <span className="w-2 h-2 rounded-full bg-amber-500"></span>}
                       </div>
@@ -359,7 +359,7 @@ export const AgendaView: React.FC = () => {
           {/* Selected day events preview */}
           <div className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-800">
             <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-              <CalendarIcon className="w-4 h-4 text-indigo-500" />
+              <CalendarIcon className="w-4 h-4 text-brand" />
               Acontecimientos para el día seleccionado: {selectedDateStr}
             </h4>
 
@@ -375,10 +375,10 @@ export const AgendaView: React.FC = () => {
                     <div
                       key={ev.id}
                       onClick={() => openModal('event_detail', ev)}
-                      className="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between cursor-pointer hover:border-indigo-400 transition-colors"
+                      className="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between cursor-pointer hover:border-brand/40 transition-colors"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400">
+                        <span className="text-xs font-mono font-bold text-brand dark:text-brand-400">
                           {ev.startTime}
                         </span>
                         <span className="text-sm font-bold text-slate-800 dark:text-slate-200">

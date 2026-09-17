@@ -66,7 +66,7 @@ export const FacturacionView: React.FC = () => {
           <select
             value={academicYearFilter}
             onChange={(e) => setAcademicYearFilter(e.target.value)}
-            className="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500"
+            className="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
           >
             <option value="2025/2026">2025 / 2026</option>
             <option value="2024/2025">2024 / 2025</option>
@@ -110,7 +110,7 @@ export const FacturacionView: React.FC = () => {
 
         {/* Próximo Vencimiento */}
         <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex items-center gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-950/60 text-brand dark:text-brand-400 flex items-center justify-center">
             <CreditCard className="w-6 h-6" />
           </div>
           <div>
@@ -135,7 +135,7 @@ export const FacturacionView: React.FC = () => {
               onClick={() => setStatusFilter(st)}
               className={`px-3 py-1.5 rounded-full text-xs font-semibold capitalize whitespace-nowrap transition-colors cursor-pointer ${
                 statusFilter === st
-                  ? 'bg-indigo-600 text-white'
+                  ? 'bg-brand text-white'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
               }`}
             >
@@ -151,7 +151,7 @@ export const FacturacionView: React.FC = () => {
             placeholder="Buscar por concepto o Nº..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-500"
+            className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
           />
         </div>
       </div>
@@ -211,7 +211,7 @@ export const FacturacionView: React.FC = () => {
                     <td className="px-5 py-4 text-right space-x-2" onClick={(e) => e.stopPropagation()}>
                       <button
                         onClick={() => openModal('invoice_detail', inv)}
-                        className="px-2.5 py-1 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/60 rounded-lg transition-colors cursor-pointer"
+                        className="px-2.5 py-1 text-xs font-semibold text-brand dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/60 rounded-lg transition-colors cursor-pointer"
                       >
                         Ver Detalle
                       </button>
