@@ -129,11 +129,6 @@ export const Sidebar: React.FC = () => {
                     name: t.configuracionTabs.usuario,
                     icon: User,
                 },
-                {
-                    id: 'idioma',
-                    name: t.configuracionTabs.idioma,
-                    icon: Languages,
-                },
             ],
         },
     ];
@@ -187,7 +182,7 @@ export const Sidebar: React.FC = () => {
                             }`}
                     >
                         <Home className="w-4 h-4 text-brand-500" />
-                        <span>Pantalla de Inicio (Dashboard)</span>
+                        <span>Panel principal</span>
                     </button>
                 </div>
 
@@ -297,7 +292,7 @@ export const Sidebar: React.FC = () => {
                     <div className="text-[10px] text-slate-500 dark:text-slate-400 truncate mb-1.5">
                         {currentStudent.name} · {currentStudent.school.type || 'Centro escolar'}
                     </div>
-                    <button
+                    {/* <button
                         type="button"
                         id="sidebar-school-info-btn"
                         onClick={() => openModal('school_detail', currentStudent.school)}
@@ -305,7 +300,7 @@ export const Sidebar: React.FC = () => {
                     >
                         <Building className="w-3 h-3" />
                         <span>Ver datos del centro escolar</span>
-                    </button>
+                    </button> */}
 
                     <button
                         type="button"
@@ -314,7 +309,7 @@ export const Sidebar: React.FC = () => {
                             setIsMobileMenuOpen(false);
                             logout();
                         }}
-                        className="w-full mt-2 flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md text-[10px] font-semibold text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/40 border border-brand-200/60 dark:border-brand-900/40 transition-colors cursor-pointer"
+                        className="w-full mt-3 flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md text-[10px] font-semibold text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/40 border border-brand-200/60 dark:border-brand-900/40 transition-colors cursor-pointer"
                         title="Cerrar sesión"
                     >
                         <LogOut className="w-3 h-3" />

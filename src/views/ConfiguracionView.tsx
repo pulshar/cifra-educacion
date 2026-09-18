@@ -160,7 +160,7 @@ export const ConfiguracionView: React.FC = () => {
   const tabs: { id: ConfiguracionSubSection; label: string; icon: any }[] = [
     { id: 'configurar_inicio', label: t.configuracionTabs.configurar_inicio, icon: LayoutDashboard },
     { id: 'usuario', label: t.configuracionTabs.usuario, icon: User },
-    { id: 'idioma', label: t.configuracionTabs.idioma, icon: Languages },
+    // { id: 'idioma', label: t.configuracionTabs.idioma, icon: Languages },
   ];
 
   return (

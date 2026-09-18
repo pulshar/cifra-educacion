@@ -98,7 +98,7 @@ export const LoginView: React.FC = () => {
         {/* ========================================================= */}
         <div
           id="login-form-pane"
-          className="w-full lg:w-[52%] xl:w-[52%] bg-white dark:bg-slate-900 rounded-none sm:rounded-[16px] lg:rounded-r-[16px] p-6 sm:p-10 xl:p-12 flex flex-col justify-between transition-colors shadow-none"
+          className="w-full lg:w-[52%] xl:w-[52%] sm:bg-white dark:bg-slate-900 rounded-none sm:rounded-[16px] lg:rounded-r-[16px] p-6 sm:p-10 xl:p-12 flex flex-col justify-between transition-colors shadow-none"
         >
           {/* 1. TOP HEADER / MARCA BAR (Justified top) */}
           <div className="flex items-center justify-between gap-4 pb-4">
@@ -297,7 +297,7 @@ export const LoginView: React.FC = () => {
             </form>
 
             {/* Quick Demo Credentials Info Pill for mobile */}
-            <div className="sm:hidden mt-3 text-center">
+            <div className="hidden mt-3 text-center">
               <button
                 type="button"
                 onClick={handleFillDemo}

@@ -78,7 +78,7 @@ export const Header: React.FC = () => {
                         </button>
                         <span className="hidden sm:inline text-slate-300 dark:text-slate-700">/</span>
                         <span className="text-sm font-bold text-slate-800 dark:text-slate-100 capitalize font-display">
-                            {activeSection === 'inicio' ? 'Pantalla de Inicio' : t.navigation[activeSection as keyof typeof t.navigation] || activeSection}
+                            {activeSection === 'inicio' ? 'Panel principal' : t.navigation[activeSection as keyof typeof t.navigation] || activeSection}
                         </span>
                     </div>
                 </div>
@@ -195,17 +195,17 @@ export const Header: React.FC = () => {
                     </button>
 
                     {/* Language Selector (ES / EN) */}
-                    <button
+                    {/* <button
                         id="header-language-toggle-btn"
                         onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
                         className="px-2 py-1 text-xs font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-800 uppercase transition-colors cursor-pointer"
                         title={language === 'es' ? 'Cambiar a inglés' : 'Switch to Spanish'}
                     >
                         {language}
-                    </button>
+                    </button> */}
 
                     {/* Dark / Light Mode Toggle */}
-                    <button
+                    {/* <button
                         id="header-theme-toggle-btn"
                         onClick={toggleTheme}
                         className="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
@@ -213,7 +213,7 @@ export const Header: React.FC = () => {
                         aria-label="Alternar tema"
                     >
                         {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
-                    </button>
+                    </button> */}
 
                     {/* User Profile Avatar / Button */}
                     <button
@@ -234,7 +234,7 @@ export const Header: React.FC = () => {
                     </button>
 
                     {/* Logout / Cerrar sesión Button */}
-                    <button
+                    {/* <button
                         type="button"
                         id="header-logout-btn"
                         onClick={logout}
@@ -243,7 +243,7 @@ export const Header: React.FC = () => {
                         aria-label="Cerrar sesión"
                     >
                         <LogOut className="w-4 h-4" />
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </header>
