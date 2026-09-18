@@ -200,7 +200,7 @@ export const FacturacionView: React.FC = () => {
                           ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300'
                           : inv.status === 'pendiente'
                             ? 'bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300'
-                            : 'bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300'
+                            : 'bg-brand-100 text-brand-800 dark:bg-brand-950/60 dark:text-brand-300'
                           }`}
                       >
                         {inv.status}

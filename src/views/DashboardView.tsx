@@ -467,7 +467,7 @@ export const DashboardView: React.FC = () => {
                         ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300'
                         : latestInvoice.status === 'pendiente'
                           ? 'bg-amber-100 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300'
-                          : 'bg-rose-100 text-rose-700 dark:bg-rose-950/60 dark:text-rose-300'
+                          : 'bg-brand-100 text-brand-700 dark:bg-brand-950/60 dark:text-brand-300'
                         }`}
                     >
                       {latestInvoice.status}
@@ -541,16 +541,16 @@ export const DashboardView: React.FC = () => {
               {/* Metric 2: Sin justificar */}
               <div
                 onClick={() => navigateTo('asistencia')}
-                className="p-4 rounded-lg bg-rose-50/50 dark:bg-rose-950/20 border border-rose-200/70 dark:border-rose-900/40 flex items-center gap-4 cursor-pointer hover:bg-rose-50/80 transition-colors"
+                className="p-4 rounded-lg bg-brand-50/50 dark:bg-brand-950/20 border border-brand-200/70 dark:border-brand-900/40 flex items-center gap-4 cursor-pointer hover:bg-brand-50/80 transition-colors"
               >
-                <div className="w-10 h-10 shrink-0 hidden sm:flex rounded-lg bg-rose-100 dark:bg-rose-950/80 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold">
+                <div className="w-10 h-10 shrink-0 hidden sm:flex rounded-lg bg-brand-100 dark:bg-brand-950/80 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold">
                   {attendanceMetrics.unjustified}
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-rose-800 dark:text-rose-300">
+                  <div className="text-xs font-semibold text-brand-800 dark:text-brand-300">
                     {t.dashboard.unjustified}
                   </div>
-                  <div className="text-[11px] text-rose-600/80 dark:text-rose-400">
+                  <div className="text-[11px] text-brand-600/80 dark:text-brand-400">
                     Requieren justificación
                   </div>
                 </div>

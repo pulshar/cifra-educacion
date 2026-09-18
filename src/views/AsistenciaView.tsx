@@ -49,7 +49,7 @@ export const AsistenciaView: React.FC = () => {
         );
       case 'ausencia_sin_justificar':
         return (
-          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300">
+          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-100 text-brand-800 dark:bg-brand-950/60 dark:text-brand-300">
             Sin justificar
           </span>
         );
@@ -132,14 +132,14 @@ export const AsistenciaView: React.FC = () => {
         <div className="p-4 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500">Sin Justificar</span>
-            <div className="w-8 h-8 rounded-lg bg-rose-50 dark:bg-rose-950/60 text-rose-600 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-brand-50 dark:bg-brand-950/60 text-brand-600 flex items-center justify-center">
               <AlertTriangle className="w-4 h-4" />
             </div>
           </div>
           <div className="text-2xl font-black text-slate-900 dark:text-white font-mono mt-2">
             {metrics.unjustified}
           </div>
-          <div className="text-[10px] text-rose-600 dark:text-rose-400 mt-1">
+          <div className="text-[10px] text-brand-600 dark:text-brand-400 mt-1">
             Requieren justificación
           </div>
         </div>

@@ -111,8 +111,8 @@ export const DEFAULT_DASHBOARD_MODULES: DashboardModuleConfig[] = [
   },
   {
     id: 'eventos_proximos',
-    title: 'Acontecimientos de los próximos 7 días',
-    name: 'Acontecimientos de los próximos 7 días',
+    title: 'Próximos 7 días',
+    name: 'Próximos 7 días',
     description: 'Exámenes, reuniones y eventos programados para esta semana',
     enabled: true,
   },

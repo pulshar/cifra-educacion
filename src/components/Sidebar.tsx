@@ -22,6 +22,7 @@ import {
     LogOut,
 } from 'lucide-react';
 import { MainSection } from '../types';
+import { BrandIcon } from './BrandIcon';
 
 export const Sidebar: React.FC = () => {
     const {
@@ -162,9 +163,10 @@ export const Sidebar: React.FC = () => {
                         className="flex items-center gap-3 text-left group focus:outline-hidden cursor-pointer"
                         title="Ir a Pantalla de Inicio"
                     >
-                        <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-600 via-brand-700 to-brand-600 flex items-center justify-center text-white font-bold text-lg shadow-sm shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        {/* <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-600 via-brand-700 to-brand-600 flex items-center justify-center text-white font-bold text-lg shadow-sm shadow-brand-500/20 group-hover:scale-105 transition-transform">
                             C
-                        </div>
+                        </div> */}
+                        <BrandIcon className="w-8" />
                         <div>
                             <div className="font-bold text-xl text-slate-900 dark:text-white font-display flex items-center gap-1.5">
                                 <span>Cifra</span>
@@ -225,7 +227,7 @@ export const Sidebar: React.FC = () => {
                                             <span
                                                 className={`inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 text-[11px] font-bold rounded-full ${isActive
                                                     ? 'bg-white text-brand-700'
-                                                    : 'bg-rose-500 text-white'
+                                                    : 'bg-brand-500 text-white'
                                                     }`}
                                             >
                                                 {item.badge}
@@ -268,7 +270,7 @@ export const Sidebar: React.FC = () => {
                                                         <span className="truncate">{sub.name}</span>
                                                     </div>
                                                     {'badge' in sub && sub.badge ? (
-                                                        <span className="shrink-0 px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-rose-500 text-white">
+                                                        <span className="shrink-0 px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-brand-500 text-white">
                                                             {sub.badge}
                                                         </span>
                                                     ) : null}
@@ -312,7 +314,7 @@ export const Sidebar: React.FC = () => {
                             setIsMobileMenuOpen(false);
                             logout();
                         }}
-                        className="w-full mt-2 flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md text-[10px] font-semibold text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/40 border border-rose-200/60 dark:border-rose-900/40 transition-colors cursor-pointer"
+                        className="w-full mt-2 flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md text-[10px] font-semibold text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/40 border border-brand-200/60 dark:border-brand-900/40 transition-colors cursor-pointer"
                         title="Cerrar sesión"
                     >
                         <LogOut className="w-3 h-3" />

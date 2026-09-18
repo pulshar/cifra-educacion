@@ -188,7 +188,7 @@ export const Header: React.FC = () => {
                     >
                         <Bell className="w-5 h-5" />
                         {unreadNotificationsCount > 0 && (
-                            <span className="absolute top-1.5 right-1.5 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-rose-500 px-1 text-[10px] font-bold text-white ring-2 ring-white dark:ring-slate-900">
+                            <span className="absolute top-1.5 right-1.5 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-brand-500 px-1 text-[10px] font-bold text-white ring-2 ring-white dark:ring-slate-900">
                                 {unreadNotificationsCount}
                             </span>
                         )}
@@ -238,7 +238,7 @@ export const Header: React.FC = () => {
                         type="button"
                         id="header-logout-btn"
                         onClick={logout}
-                        className="p-2 text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/40 rounded-lg transition-colors cursor-pointer"
+                        className="p-2 text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/40 rounded-lg transition-colors cursor-pointer"
                         title="Cerrar sesión (volver a pantalla de login)"
                         aria-label="Cerrar sesión"
                     >

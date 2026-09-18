@@ -156,7 +156,7 @@ export const ModalRenderer: React.FC = () => {
                           ? 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300'
                           : inv.status === 'pendiente'
                             ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300'
-                            : 'bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300'
+                            : 'bg-brand-100 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300'
                           }`}
                       >
                         {inv.status}
@@ -572,7 +572,7 @@ export const ModalRenderer: React.FC = () => {
                     <div>
                       <span
                         className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold capitalize ${inc.type.includes('sin_justificar')
-                          ? 'bg-rose-100 text-rose-700 dark:bg-rose-950/60 dark:text-rose-300'
+                          ? 'bg-brand-100 text-brand-700 dark:bg-brand-950/60 dark:text-brand-300'
                           : inc.type === 'retraso'
                             ? 'bg-amber-100 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300'
                             : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300'
@@ -687,7 +687,7 @@ export const ModalRenderer: React.FC = () => {
                         closeModal();
                       }}
                       className={`px-4 py-2 text-xs font-semibold rounded-lg shadow-xs transition-colors cursor-pointer ${isEnrolled
-                        ? 'bg-rose-600 hover:bg-rose-700 text-white'
+                        ? 'bg-brand-600 hover:bg-brand-700 text-white'
                         : 'bg-brand-600 hover:bg-brand-700 text-white'
                         }`}
                     >

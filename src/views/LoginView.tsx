@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import classroomHeroImage from '../assets/images/modern_classroom_login_1789636813881.jpg';
+import { BrandIcon } from '../components/BrandIcon';
 
 export const LoginView: React.FC = () => {
   const { login, loginDemo, language, setLanguage, theme, toggleTheme, openModal } = useApp();
@@ -103,9 +104,10 @@ export const LoginView: React.FC = () => {
           <div className="flex items-center justify-between gap-4 pb-4">
             {/* Brand Logo & Name */}
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-brand flex items-center justify-center text-white font-black text-base shadow-xs">
+              {/* <div className="w-9 h-9 rounded-lg bg-brand flex items-center justify-center text-white font-black text-base shadow-xs">
                 C
-              </div>
+              </div> */}
+              <BrandIcon className="w-9" />
               <div className="flex items-center gap-1.5">
                 <span className="text-xl font-bold font-display text-slate-900 dark:text-white">
                   Cifra

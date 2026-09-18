@@ -78,51 +78,51 @@ export const ConfiguracionView: React.FC = () => {
       case 'notificaciones':
         return {
           icon: Bell,
-          color: 'text-brand-600 dark:text-brand-400',
-          bg: 'bg-brand-50 dark:bg-brand-950/50',
-          border: 'border-brand-200 dark:border-brand-800',
+          color: 'text-slate-600 dark:text-slate-300',
+          bg: 'bg-slate-50 dark:bg-slate-950/50',
+          border: 'border-slate-200 dark:border-slate-800',
         };
       case 'mensajes':
         return {
           icon: Mail,
-          color: 'text-sky-600 dark:text-sky-400',
-          bg: 'bg-sky-50 dark:bg-sky-950/50',
-          border: 'border-sky-200 dark:border-sky-800',
+          color: 'text-slate-600 dark:text-slate-300',
+          bg: 'bg-slate-50 dark:bg-slate-950/50',
+          border: 'border-slate-200 dark:border-slate-800',
         };
       case 'circulares':
         return {
           icon: FileCheck,
-          color: 'text-emerald-600 dark:text-emerald-400',
-          bg: 'bg-emerald-50 dark:bg-emerald-950/50',
-          border: 'border-emerald-200 dark:border-emerald-800',
+          color: 'text-slate-600 dark:text-slate-300',
+          bg: 'bg-slate-50 dark:bg-slate-950/50',
+          border: 'border-slate-200 dark:border-slate-800',
         };
       case 'eventos_proximos':
         return {
           icon: Calendar,
-          color: 'text-amber-600 dark:text-amber-400',
-          bg: 'bg-amber-50 dark:bg-amber-950/50',
-          border: 'border-amber-200 dark:border-amber-800',
+          color: 'text-slate-600 dark:text-slate-300',
+          bg: 'bg-slate-50 dark:bg-slate-950/50',
+          border: 'border-slate-200 dark:border-slate-800',
         };
       case 'proximas_clases':
         return {
           icon: Clock,
-          color: 'text-blue-600 dark:text-blue-400',
-          bg: 'bg-blue-50 dark:bg-blue-950/50',
-          border: 'border-blue-200 dark:border-blue-800',
+          color: 'text-slate-600 dark:text-slate-300',
+          bg: 'bg-slate-50 dark:bg-slate-950/50',
+          border: 'border-slate-200 dark:border-slate-800',
         };
       case 'ultima_factura':
         return {
           icon: CreditCard,
-          color: 'text-purple-600 dark:text-purple-400',
-          bg: 'bg-purple-50 dark:bg-purple-950/50',
-          border: 'border-purple-200 dark:border-purple-800',
+          color: 'text-slate-600 dark:text-slate-300',
+          bg: 'bg-slate-50 dark:bg-slate-950/50',
+          border: 'border-slate-200 dark:border-slate-800',
         };
       case 'graficas_asistencia':
         return {
           icon: TrendingUp,
-          color: 'text-teal-600 dark:text-teal-400',
-          bg: 'bg-teal-50 dark:bg-teal-950/50',
-          border: 'border-teal-200 dark:border-teal-800',
+          color: 'text-slate-600 dark:text-slate-300',
+          bg: 'bg-slate-50 dark:bg-slate-950/50',
+          border: 'border-slate-200 dark:border-slate-800',
         };
     }
   };
@@ -619,7 +619,7 @@ export const ConfiguracionView: React.FC = () => {
 
                         {/* Order badge */}
                         <div
-                          className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0 ${mod.enabled
+                          className={`w-7 h-7 rounded-md flex items-center justify-center text-xs font-black shrink-0 ${mod.enabled
                             ? 'bg-brand-600 text-white shadow-xs'
                             : 'bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400'
                             }`}
@@ -629,7 +629,7 @@ export const ConfiguracionView: React.FC = () => {
 
                         {/* Icon */}
                         <div
-                          className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 ${visuals.bg} ${visuals.color} border ${visuals.border}`}
+                          className={`w-7 h-7 rounded-md flex items-center justify-center shrink-0 ${visuals.bg} ${visuals.color} border ${visuals.border}`}
                         >
                           <Icon className="w-4 h-4" />
                         </div>
@@ -659,7 +659,7 @@ export const ConfiguracionView: React.FC = () => {
                           type="button"
                           id={`btn-toggle-mod-${mod.id}`}
                           onClick={() => toggleDashboardModule(mod.id)}
-                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${mod.enabled
+                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-bold transition-all cursor-pointer ${mod.enabled
                             ? 'bg-emerald-50 text-emerald-700 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60'
                             : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 border border-slate-200 dark:border-slate-700'
                             }`}
@@ -684,7 +684,7 @@ export const ConfiguracionView: React.FC = () => {
                           id={`btn-move-up-${mod.id}`}
                           onClick={() => moveDashboardModule(index, 'up')}
                           disabled={isFirst}
-                          className={`p-1.5 rounded-lg border text-slate-600 dark:text-slate-300 transition-colors ${isFirst
+                          className={`p-1.5 rounded-md border text-slate-600 dark:text-slate-300 transition-colors ${isFirst
                             ? 'opacity-30 cursor-not-allowed border-transparent'
                             : 'hover:bg-brand-50 dark:hover:bg-brand-950/60 hover:text-brand-600 dark:hover:text-brand-400 border-slate-200 dark:border-slate-700 cursor-pointer'
                             }`}
@@ -700,7 +700,7 @@ export const ConfiguracionView: React.FC = () => {
                           id={`btn-move-down-${mod.id}`}
                           onClick={() => moveDashboardModule(index, 'down')}
                           disabled={isLast}
-                          className={`p-1.5 rounded-lg border text-slate-600 dark:text-slate-300 transition-colors ${isLast
+                          className={`p-1.5 rounded-md border text-slate-600 dark:text-slate-300 transition-colors ${isLast
                             ? 'opacity-30 cursor-not-allowed border-transparent'
                             : 'hover:bg-brand-50 dark:hover:bg-brand-950/60 hover:text-brand-600 dark:hover:text-brand-400 border-slate-200 dark:border-slate-700 cursor-pointer'
                             }`}

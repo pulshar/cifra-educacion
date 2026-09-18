@@ -69,7 +69,7 @@ export const CalificacionesView: React.FC = () => {
       };
     }
     return {
-      bg: 'bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300',
+      bg: 'bg-brand-100 text-brand-800 dark:bg-brand-950/60 dark:text-brand-300',
       label: 'Insuficiente',
     };
   };
