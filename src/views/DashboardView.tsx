@@ -318,10 +318,14 @@ export const DashboardView: React.FC = () => {
                     <div className="flex items-center justify-between mb-2">
                       <span
                         className={`text-[10px] font-bold px-2 py-0.5 rounded-full capitalize ${ev.type === 'examen'
-                          ? 'bg-rose-100 text-rose-700 dark:bg-rose-950/60 dark:text-rose-300'
+                          ? 'bg-brand-100 text-brand-700 dark:bg-brand-950/60 dark:text-brand-300'
                           : ev.type === 'reunion'
                             ? 'bg-amber-100 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300'
-                            : 'bg-brand-50 text-brand-700 dark:bg-brand-950/60 dark:text-brand-300'
+                            : ev.type === 'evento'
+                              ? 'bg-purple-100 text-purple-800 dark:bg-purple-950/60 dark:text-purple-300'
+                              : ev.type === 'actividad'
+                                ? 'bg-purple-100 text-purple-800 dark:bg-purple-950/60 dark:text-purple-300'
+                                : 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300'
                           }`}
                       >
                         {ev.type}

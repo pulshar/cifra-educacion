@@ -61,16 +61,16 @@ export const AgendaView: React.FC = () => {
   // Helper badge for event type
   const renderTypeBadge = (type: EventType) => {
     const map: Record<EventType, string> = {
-      clase: 'bg-blue-100 text-blue-800 dark:bg-blue-950/60 dark:text-blue-300',
-      examen: 'bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300 font-bold',
+      clase: 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300',
+      examen: 'bg-brand-100 text-brand-800 dark:bg-brand-950/60 dark:text-brand-300 font-bold',
       evento: 'bg-purple-100 text-purple-800 dark:bg-purple-950/60 dark:text-purple-300',
       reunion: 'bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300',
-      actividad: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300',
+      actividad: 'bg-purple-100 text-purple-800 dark:bg-purple-950/60 dark:text-purple-300',
       otros: 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300',
     };
     return (
       <span
-        className={`px-2 py-0.5 rounded-full text-[11px] uppercase tracking-wide font-semibold ${map[type] || map.otros
+        className={`px-2 py-1 rounded-full text-[10px] uppercase tracking-wide font-semibold ${map[type] || map.otros
           }`}
       >
         {type}
@@ -259,18 +259,18 @@ export const AgendaView: React.FC = () => {
                           key={ev.id}
                           onClick={() => openModal('event_detail', ev)}
                           className={`p-2.5 rounded-lg border text-left cursor-pointer transition-all hover:scale-[1.02] shadow-2xs ${ev.type === 'examen'
-                            ? 'bg-rose-50 border-rose-200 text-rose-900 dark:bg-rose-950/40 dark:border-rose-900 dark:text-rose-200'
+                            ? 'bg-brand-50 border-brand-200 text-brand-900 dark:bg-brand-950/40 dark:border-brand-900 dark:text-brand-200'
                             : ev.type === 'reunion'
                               ? 'bg-amber-50 border-amber-200 text-amber-900 dark:bg-amber-950/40 dark:border-amber-900 dark:text-amber-200'
                               : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200'
                             }`}
                         >
-                          <div className="text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400">
+                          <div className="text-[10px] font-mono font-bold">
                             {ev.startTime}
                           </div>
                           <div className="text-xs font-bold truncate mt-0.5">{ev.title}</div>
                           {ev.location && (
-                            <div className="text-[10px] text-slate-400 truncate mt-0.5">
+                            <div className="text-[10px]  truncate mt-0.5">
                               {ev.location}
                             </div>
                           )}
@@ -336,8 +336,10 @@ export const AgendaView: React.FC = () => {
                     </span>
                     {hasEvents && (
                       <div className="flex gap-1 flex-wrap mt-1">
-                        <span className="w-2 h-2 rounded-full bg-brand"></span>
-                        {dayNum === 19 && <span className="w-2 h-2 rounded-full bg-rose-500"></span>}
+                        <span className="w-2 h-2 rounded-full border border-brand"></span>
+                        {dayNum === 22 && <span className="w-2 h-2 rounded-full bg-purple-500"></span>}
+                        {dayNum === 21 && <span className="w-2 h-2 rounded-full bg-slate-500"></span>}
+                        {dayNum === 19 && <span className="w-2 h-2 rounded-full bg-brand"></span>}
                         {dayNum === 17 && <span className="w-2 h-2 rounded-full bg-amber-500"></span>}
                       </div>
                     )}
