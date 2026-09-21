@@ -190,7 +190,7 @@ export const ConfiguracionView: React.FC = () => {
                 key={tab.id}
                 id={`config-tab-${tab.id}`}
                 onClick={() => setConfiguracionSubSection(tab.id)}
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${isSelected
+                className={`btn-w-100 flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${isSelected
                   ? 'bg-white dark:bg-slate-700 text-brand-600 dark:text-brand-300 shadow-xs'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
                   }`}
@@ -227,7 +227,7 @@ export const ConfiguracionView: React.FC = () => {
           type="button"
           id="config-view-assigned-school-btn"
           onClick={() => openModal('school_detail', currentStudent.school || schoolInfo)}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-brand-600 dark:text-brand-400 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shrink-0 shadow-xs cursor-pointer"
+          className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-brand-600 dark:text-brand-400 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shrink-0 shadow-xs cursor-pointer"
         >
           <Info className="w-3.5 h-3.5" />
           <span>Consultar ficha del centro</span>
@@ -390,7 +390,7 @@ export const ConfiguracionView: React.FC = () => {
             <button
               type="submit"
               id="btn-save-user-profile"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 shadow-xs transition-colors cursor-pointer"
+              className="btn-w-100 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 shadow-xs transition-colors cursor-pointer"
             >
               <Save className="w-4 h-4" />
               <span>Guardar Cambios</span>
@@ -679,36 +679,38 @@ export const ConfiguracionView: React.FC = () => {
                         </button>
 
                         {/* Move Up Button */}
-                        <button
-                          type="button"
-                          id={`btn-move-up-${mod.id}`}
-                          onClick={() => moveDashboardModule(index, 'up')}
-                          disabled={isFirst}
-                          className={`p-1.5 rounded-md border text-slate-600 dark:text-slate-300 transition-colors ${isFirst
-                            ? 'opacity-30 cursor-not-allowed border-transparent'
-                            : 'hover:bg-brand-50 dark:hover:bg-brand-950/60 hover:text-brand-600 dark:hover:text-brand-400 border-slate-200 dark:border-slate-700 cursor-pointer'
-                            }`}
-                          title="Subir de posición"
-                          aria-label={`Subir ${mod.title}`}
-                        >
-                          <ArrowUp className="w-4 h-4" />
-                        </button>
+                        <div className='flex gap-2'>
+                          <button
+                            type="button"
+                            id={`btn-move-up-${mod.id}`}
+                            onClick={() => moveDashboardModule(index, 'up')}
+                            disabled={isFirst}
+                            className={`p-1.5 rounded-md border text-slate-600 dark:text-slate-300 transition-colors ${isFirst
+                              ? 'opacity-30 cursor-not-allowed border-transparent'
+                              : 'hover:bg-brand-50 dark:hover:bg-brand-950/60 hover:text-brand-600 dark:hover:text-brand-400 border-slate-200 dark:border-slate-700 cursor-pointer'
+                              }`}
+                            title="Subir de posición"
+                            aria-label={`Subir ${mod.title}`}
+                          >
+                            <ArrowUp className="w-4 h-4" />
+                          </button>
 
-                        {/* Move Down Button */}
-                        <button
-                          type="button"
-                          id={`btn-move-down-${mod.id}`}
-                          onClick={() => moveDashboardModule(index, 'down')}
-                          disabled={isLast}
-                          className={`p-1.5 rounded-md border text-slate-600 dark:text-slate-300 transition-colors ${isLast
-                            ? 'opacity-30 cursor-not-allowed border-transparent'
-                            : 'hover:bg-brand-50 dark:hover:bg-brand-950/60 hover:text-brand-600 dark:hover:text-brand-400 border-slate-200 dark:border-slate-700 cursor-pointer'
-                            }`}
-                          title="Bajar de posición"
-                          aria-label={`Bajar ${mod.title}`}
-                        >
-                          <ArrowDown className="w-4 h-4" />
-                        </button>
+                          {/* Move Down Button */}
+                          <button
+                            type="button"
+                            id={`btn-move-down-${mod.id}`}
+                            onClick={() => moveDashboardModule(index, 'down')}
+                            disabled={isLast}
+                            className={`p-1.5 rounded-md border text-slate-600 dark:text-slate-300 transition-colors ${isLast
+                              ? 'opacity-30 cursor-not-allowed border-transparent'
+                              : 'hover:bg-brand-50 dark:hover:bg-brand-950/60 hover:text-brand-600 dark:hover:text-brand-400 border-slate-200 dark:border-slate-700 cursor-pointer'
+                              }`}
+                            title="Bajar de posición"
+                            aria-label={`Bajar ${mod.title}`}
+                          >
+                            <ArrowDown className="w-4 h-4" />
+                          </button>
+                        </div>
                       </div>
                     </div>
                   );
@@ -716,12 +718,12 @@ export const ConfiguracionView: React.FC = () => {
               </div>
 
               {/* Bottom Actions */}
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-center sm:justify-between gap-3">
                 <div className="flex items-center gap-3">
                   <button
                     id="btn-save-dashboard-config"
                     onClick={saveDashboardModules}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 shadow-xs transition-colors cursor-pointer"
+                    className="btn-w-100 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 shadow-xs transition-colors cursor-pointer"
                   >
                     <Save className="w-4 h-4" />
                     <span>Guardar Configuración</span>
@@ -730,7 +732,7 @@ export const ConfiguracionView: React.FC = () => {
                   <button
                     id="btn-reset-dashboard-config"
                     onClick={resetDashboardModules}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                    className="btn-w-100 inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
                     <span>Restablecer por defecto</span>
@@ -740,7 +742,7 @@ export const ConfiguracionView: React.FC = () => {
                 <button
                   id="btn-goto-dashboard"
                   onClick={() => navigateTo('inicio')}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/50 transition-colors cursor-pointer"
+                  className="btn-w-100 inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-950/50 transition-colors cursor-pointer"
                 >
                   <LayoutDashboard className="w-4 h-4" />
                   <span>Ver en Pantalla de Inicio</span>

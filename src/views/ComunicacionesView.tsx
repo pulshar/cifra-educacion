@@ -227,7 +227,7 @@ export const ComunicacionesView: React.FC = () => {
           </div>
 
           {/* Categories filters */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
+          <div className="flex items-center gap-1.5 overflow-x-auto hide-scrollbar pb-1">
             <Filter className="w-3.5 h-3.5 text-slate-400 shrink-0 ml-1" />
             {notificationCategories.map((cat) => (
               <button
@@ -557,7 +557,7 @@ export const ComunicacionesView: React.FC = () => {
       {/* ========================================================================= */}
       {comunicacionesSubSection === 'circulares' && (
         <div id="subseccion-circulares" className="space-y-4">
-          <div className="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
+          <div className="sm:flex items-center justify-between gap-3 p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
             <div className="relative flex-1 max-w-md">
               <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
               <input

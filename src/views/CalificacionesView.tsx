@@ -88,11 +88,11 @@ export const CalificacionesView: React.FC = () => {
         </div>
 
         {/* Academic Year Selector & Download PDF */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center flex-wrap gap-3">
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value)}
-            className="px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
+            className="btn-w-100 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
           >
             <option value="2025/2026">Curso 2025 / 2026</option>
             <option value="2024/2025">Curso 2024 / 2025</option>
@@ -106,7 +106,7 @@ export const CalificacionesView: React.FC = () => {
                 'success'
               )
             }
-            className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand hover:bg-brand-hover rounded-lg shadow-xs transition-colors cursor-pointer"
+            className="btn-w-100 inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand hover:bg-brand-hover rounded-lg shadow-xs transition-colors cursor-pointer"
           >
             <Download className="w-3.5 h-3.5" />
             <span>Boletín Oficial (PDF)</span>
@@ -117,7 +117,7 @@ export const CalificacionesView: React.FC = () => {
       {/* 6.1 SELECTOR DE EVALUACIÓN (EXACTAMENTE LAS 4 ESPECIFICADAS) */}
       <div
         id="evaluation-period-selector"
-        className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 p-1.5 bg-slate-100 dark:bg-slate-800/80 rounded-lg border border-slate-200 dark:border-slate-700"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5 p-1.5 bg-slate-100 dark:bg-slate-800/80 rounded-lg border border-slate-200 dark:border-slate-700"
       >
         {evaluationOptions.map((opt) => (
           <button

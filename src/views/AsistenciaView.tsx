@@ -89,7 +89,7 @@ export const AsistenciaView: React.FC = () => {
               justified: false,
             })
           }
-          className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-xs transition-colors cursor-pointer"
+          className="inline-flex items-center justify-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-xs transition-colors cursor-pointer"
         >
           <PlusCircle className="w-4 h-4" />
           <span>Notificar Ausencia Prevista</span>
@@ -163,7 +163,7 @@ export const AsistenciaView: React.FC = () => {
 
       {/* 7.2 LISTADO DETALLADO CON FILTROS */}
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
-        <div className="flex items-center gap-2 overflow-x-auto">
+        <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar">
           <Filter className="w-4 h-4 text-slate-400 shrink-0 ml-1" />
           {[
             { id: 'todos', label: 'Todas' },

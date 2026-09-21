@@ -126,7 +126,7 @@ export const FacturacionView: React.FC = () => {
       {/* Filters & Search */}
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
         {/* Status Filters: Todas, Pagadas, Pendientes, Devueltas */}
-        <div className="flex items-center gap-1.5 overflow-x-auto">
+        <div className="flex items-center gap-1.5 overflow-x-auto hide-scrollbar">
           <Filter className="w-3.5 h-3.5 text-slate-400 ml-1 shrink-0" />
           {['todas', 'pagada', 'pendiente', 'devuelta'].map((st) => (
             <button

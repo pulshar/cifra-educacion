@@ -94,12 +94,12 @@ export const AgendaView: React.FC = () => {
         {/* View Mode Switcher (Día / Semana / Mes) */}
         <div
           id="agenda-view-mode-selector"
-          className="inline-flex p-1 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 self-start sm:self-auto"
+          className="inline-flex p-1 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 sm:self-auto"
         >
           <button
             id="agenda-mode-dia-btn"
             onClick={() => setViewMode('dia')}
-            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${viewMode === 'dia'
+            className={`px-4 py-1.5 flex-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${viewMode === 'dia'
               ? 'bg-white dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
               }`}
@@ -109,7 +109,7 @@ export const AgendaView: React.FC = () => {
           <button
             id="agenda-mode-semana-btn"
             onClick={() => setViewMode('semana')}
-            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${viewMode === 'semana'
+            className={`px-4 py-1.5 flex-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${viewMode === 'semana'
               ? 'bg-white dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
               }`}
@@ -119,7 +119,7 @@ export const AgendaView: React.FC = () => {
           <button
             id="agenda-mode-mes-btn"
             onClick={() => setViewMode('mes')}
-            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${viewMode === 'mes'
+            className={`px-4 py-1.5 flex-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${viewMode === 'mes'
               ? 'bg-white dark:bg-slate-700 text-brand dark:text-brand-300 shadow-xs'
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'
               }`}
@@ -130,7 +130,7 @@ export const AgendaView: React.FC = () => {
       </div>
 
       {/* Filter Badges: Todos, Clases, Exámenes, Eventos, Reuniones, Actividades, Otros */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-1" id="agenda-filters-container">
+      <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1" id="agenda-filters-container">
         <Filter className="w-4 h-4 text-slate-400 shrink-0 ml-1" />
         {filterOptions.map((opt) => (
           <button
@@ -150,7 +150,7 @@ export const AgendaView: React.FC = () => {
       {/* 3.1 VISTA DÍA */}
       {viewMode === 'dia' && (
         <div id="agenda-day-view-container" className="space-y-4">
-          <div className="flex items-center justify-between px-4 py-3 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-200/80 dark:border-slate-800">
+          <div className="flex items-center justify-between gap-3 px-4 py-3 bg-slate-50 dark:bg-slate-800/60 rounded-lg border border-slate-200/80 dark:border-slate-800">
             <div className="flex items-center gap-2">
               <CalendarIcon className="w-4 h-4 text-brand" />
               <span className="text-sm font-bold text-slate-800 dark:text-slate-100">
@@ -174,8 +174,8 @@ export const AgendaView: React.FC = () => {
                   className="p-4 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand/40 dark:hover:border-brand/50 hover:shadow-xs transition-all cursor-pointer"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <div className="flex items-center gap-3">
-                      <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-mono font-bold">
+                    <div className="block sm:flex items-center gap-3">
+                      <div className="flex items-center w-fit mb-1 sm:mb-0 gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-mono font-bold">
                         <Clock className="w-3.5 h-3.5 text-brand" />
                         <span>{ev.startTime} - {ev.endTime}</span>
                       </div>
@@ -186,7 +186,7 @@ export const AgendaView: React.FC = () => {
                     <div>{renderTypeBadge(ev.type)}</div>
                   </div>
 
-                  <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-xs text-slate-500 dark:text-slate-400 mt-2">
+                  <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-500 dark:text-slate-400 mt-2">
                     {ev.location && (
                       <span className="flex items-center gap-1.5">
                         <MapPin className="w-3.5 h-3.5 text-slate-400" /> {ev.location}
@@ -199,7 +199,7 @@ export const AgendaView: React.FC = () => {
                     )}
                     {ev.description && (
                       <span className="flex items-center gap-1.5">
-                        <Info className="w-3.5 h-3.5 text-slate-400" /> {ev.description}
+                        <Info className="w-3.5 h-3.5 text-slate-400 hidden sm:block" /> {ev.description}
                       </span>
                     )}
                   </div>

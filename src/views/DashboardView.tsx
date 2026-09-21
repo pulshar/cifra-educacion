@@ -405,8 +405,10 @@ export const DashboardView: React.FC = () => {
                           {cls.subject || cls.title}
                         </div>
                         <div className="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-2">
-                          <span>{cls.teacher}</span>
-                          {cls.location && <span>· {cls.location}</span>}
+                          <span>
+                            {cls.teacher}
+                            {cls.location && ` · ${cls.location}`}
+                          </span>
                         </div>
                       </div>
                     </div>
