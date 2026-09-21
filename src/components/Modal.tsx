@@ -104,14 +104,14 @@ export const ModalRenderer: React.FC = () => {
                     {notif.details && <p className="text-slate-600 dark:text-slate-400">{notif.details}</p>}
                   </div>
 
-                  <div className="flex items-center justify-end gap-3 pt-3">
+                  <div className="flex items-center flex-wrap justify-end gap-3 pt-3">
                     {!notif.read && (
                       <button
                         onClick={() => {
                           markNotificationAsRead(notif.id);
                           showToast('Notificación marcada como leída');
                         }}
-                        className="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+                        className="btn-w-100 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
                       >
                         Marcar como leída
                       </button>
@@ -123,7 +123,7 @@ export const ModalRenderer: React.FC = () => {
                           closeModal();
                           navigateTo(notif.actionUrl!);
                         }}
-                        className="px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-xs transition-colors cursor-pointer"
+                        className="btn-w-100 px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-xs transition-colors cursor-pointer"
                       >
                         Ir al apartado correspondiente
                       </button>
@@ -234,7 +234,7 @@ export const ModalRenderer: React.FC = () => {
                       onClick={() => {
                         window.print();
                       }}
-                      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-lg transition-colors cursor-pointer"
+                      className="btn-w-100 inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-lg transition-colors cursor-pointer"
                     >
                       <Printer className="w-4 h-4" />
                       Imprimir recibo
@@ -243,7 +243,7 @@ export const ModalRenderer: React.FC = () => {
                       onClick={() => {
                         showToast(`Descargando factura ${inv.number}.pdf...`, 'success');
                       }}
-                      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-xs transition-colors cursor-pointer"
+                      className="btn-w-100 inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-xs transition-colors cursor-pointer"
                     >
                       <Download className="w-4 h-4" />
                       Descargar PDF
@@ -324,7 +324,7 @@ export const ModalRenderer: React.FC = () => {
                   <div className="flex justify-end pt-3">
                     <button
                       onClick={closeModal}
-                      className="px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors cursor-pointer"
+                      className="btn-w-100 px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors cursor-pointer"
                     >
                       Aceptar
                     </button>
@@ -449,7 +449,7 @@ export const ModalRenderer: React.FC = () => {
                   <div className="flex justify-end pt-2">
                     <button
                       onClick={closeModal}
-                      className="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-lg transition-colors cursor-pointer"
+                      className="btn-w-100 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-lg transition-colors cursor-pointer"
                     >
                       Cerrar
                     </button>
@@ -512,7 +512,7 @@ export const ModalRenderer: React.FC = () => {
                   <div className="flex justify-end pt-2">
                     <button
                       onClick={closeModal}
-                      className="px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors cursor-pointer"
+                      className="btn-w-100 px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors cursor-pointer"
                     >
                       Aceptar y Cerrar
                     </button>
@@ -628,7 +628,7 @@ export const ModalRenderer: React.FC = () => {
                   <div className="flex justify-end pt-2">
                     <button
                       onClick={closeModal}
-                      className="px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg cursor-pointer"
+                      className="btn-w-100 px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg cursor-pointer"
                     >
                       Aceptar
                     </button>
@@ -785,7 +785,7 @@ export const ModalRenderer: React.FC = () => {
                       type="button"
                       id="modal-school-close-btn"
                       onClick={closeModal}
-                      className="px-5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors cursor-pointer shadow-xs"
+                      className="btn-w-100 px-5 py-2 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors cursor-pointer shadow-xs"
                     >
                       Cerrar
                     </button>
@@ -990,17 +990,17 @@ const NewMessageForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         ></textarea>
       </div>
 
-      <div className="flex items-center justify-end gap-3 pt-2">
+      <div className="flex items-center flex-wrap justify-end gap-3 pt-2">
         <button
           type="button"
           onClick={onClose}
-          className="px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+          className="btn-w-100 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
         >
           Cancelar
         </button>
         <button
           type="submit"
-          className="inline-flex items-center gap-2 px-5 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-xs cursor-pointer"
+          className="btn-w-100 inline-flex items-center gap-2 px-5 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-xs cursor-pointer"
         >
           <Send className="w-4 h-4" />
           Enviar mensaje

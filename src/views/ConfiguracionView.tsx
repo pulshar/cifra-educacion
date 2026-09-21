@@ -247,7 +247,7 @@ export const ConfiguracionView: React.FC = () => {
             <img
               src={userProfile.avatar}
               alt={userProfile.name}
-              className="w-16 h-16 rounded-full object-cover ring-2 ring-brand-500/20"
+              className="w-16 h-16 rounded-full shrink-0 object-cover ring-2 ring-brand-500/20"
               referrerPolicy="no-referrer"
             />
             <div>
@@ -719,7 +719,7 @@ export const ConfiguracionView: React.FC = () => {
 
               {/* Bottom Actions */}
               <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-center sm:justify-between gap-3">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center flex-wrap gap-3">
                   <button
                     id="btn-save-dashboard-config"
                     onClick={saveDashboardModules}

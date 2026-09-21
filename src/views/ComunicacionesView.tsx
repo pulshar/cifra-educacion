@@ -517,26 +517,28 @@ export const ComunicacionesView: React.FC = () => {
                 {/* Reply Input Form */}
                 <form
                   onSubmit={handleSendReply}
-                  className="p-3 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex items-center gap-2"
+                  className="p-3 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex flex-wrap sm:flex-nowrap items-center gap-2"
                 >
-                  <button
-                    type="button"
-                    onClick={() => showToast('Seleccione un archivo del explorador...', 'info')}
-                    className="p-2 text-slate-400 hover:text-brand dark:hover:text-brand-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-                    title="Adjuntar archivo"
-                  >
-                    <Paperclip className="w-4 h-4" />
-                  </button>
-                  <input
-                    type="text"
-                    placeholder="Escriba su respuesta a la tutoría..."
-                    value={replyText}
-                    onChange={(e) => setReplyText(e.target.value)}
-                    className="flex-1 px-3 py-2 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
-                  />
+                  <div className="flex gap-2 w-full">
+                    <button
+                      type="button"
+                      onClick={() => showToast('Seleccione un archivo del explorador...', 'info')}
+                      className="p-2 text-slate-400 hover:text-brand dark:hover:text-brand-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                      title="Adjuntar archivo"
+                    >
+                      <Paperclip className="w-4 h-4" />
+                    </button>
+                    <input
+                      type="text"
+                      placeholder="Escriba su respuesta a la tutoría..."
+                      value={replyText}
+                      onChange={(e) => setReplyText(e.target.value)}
+                      className="flex-1 px-3 py-2 text-xs bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-brand/40"
+                    />
+                  </div>
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-white bg-brand hover:bg-brand-hover rounded-lg shadow-xs transition-colors cursor-pointer"
+                    className="btn-w-100 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-white bg-brand hover:bg-brand-hover rounded-lg shadow-xs transition-colors cursor-pointer"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>Responder</span>
