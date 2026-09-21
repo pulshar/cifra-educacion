@@ -38,6 +38,10 @@
     font-family: var(--font-display);
     @apply tracking-wide;
   }
+
+  input[type="checkbox"] {
+    accent-color: var(--color-brand);
+  }
 }
 
 @layer utilities {
